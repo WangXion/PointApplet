@@ -1,0 +1,5 @@
+<view class="container">
+    <view catchtouchend="touchendCallback" catchtouchmove="touchmoveCallback" catchtouchstart="touchstartCallback" class="img" style="width:150rpx; height:150rpx;">
+        <image src="{{originImg.url}}" style="transform: translate({{stv.offsetX}}rpx, {{stv.offsetY}}rpx) scale({{stv.scale}}) rotate({{stv.rotate}}deg);width:150rpx; height:150rpx"></image>
+    </view>
+</view>

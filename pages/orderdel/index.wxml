@@ -1,0 +1,55 @@
+<view>
+    <view bindtap="changeAddress" class="dizhi">
+        <view class="dz_top">
+            <image mode="aspectFill " src="/images/user/dz.png"></image>
+            <view>
+				{{name}} {{phone}}
+			</view>
+        </view>
+        <view class="f24" style="margin-top:24rpx">
+			{{address}}
+		</view>
+    </view>
+    <view class="dp">
+        <view class="dp_list" wx:for="{{cartInfo}}" wx:key="index">
+            <view style="padding-bottom:32rpx;display: flex;justify-content: space-between;">
+                <view>
+                    <image class="home" src="/images/user/img.png"></image>
+				{{item.productInfo.cate_name}}
+							</view>
+                <view style="colo:#999999">共{{item.cart_num}}件</view>
+            </view>
+            <view class="good_list">
+                <image class="goodname" src="{{item.productInfo.image}}"></image>
+                <view style="flex:auto">
+                    <view>{{item.productInfo.store_name}}</view>
+                    <view class="f26" style="color:#999999;margin-top:16rpx">{{item.productInfo.attrInfo.suk}}</view>
+                    <view class="amout">
+                        <text class="f32">￥{{item.productInfo.price}}</text>
+                        <view style="color:#999999">
+							x{{item.cart_num}}
+						</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="order_del">
+        <view>
+            <view>订单编号：</view>{{orderId}}
+		</view>
+        <view>
+            <view>下单时间：</view>{{addTime}}</view>
+        <view>
+            <view>支付方式：</view>{{status._payType}}
+		</view>
+        <view>
+            <view>支付金额：</view>
+            <text style="color:#C28E90">￥{{price}}</text>
+        </view>
+    </view>
+    <view class="btns">
+        <view bindtap="cancel">取消支付</view>
+        <view bindtap="navto" class="pay">继续支付</view>
+    </view>
+</view>

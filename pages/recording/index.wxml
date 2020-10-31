@@ -1,0 +1,15 @@
+<view>
+    <view style="background:#fff;margin-top:30rpx">
+        <view class="list">
+            <image src="/img/me/yh.png"></image>
+            <view class="center">
+                <view class="f24">8888 **** **** 8888</view>
+                <view class="f24" style="color:#999999">2020-03-01 11:18:08</view>
+            </view>
+            <view class="right">
+                <view class="f28">￥99.99</view>
+                <view class="f24" style="color:#999999">已提现</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,477 @@
+page {
+    background: #f5f5f5;
+}
+
+.index-tabs .van-tab--active .van-ellipsis {
+    color: #3d365e;
+    font-size: 32rpx;
+}
+
+.van-tabs .van-tabs__wrap .van-tabs__nav .van-tab {
+    position: relative;
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 0 5px;
+    cursor: pointer;
+    color: #646566;
+    color: var(--tab-text-color,#646566);
+    font-size: 14px;
+    font-size: var(--tab-font-size,14px);
+    line-height: 44px;
+    line-height: var(--tabs-line-height,44px);
+    display: flex;
+    justify-content: left;
+}
+
+.kong {
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.tabs .van-tab--active {
+    color: #c28e90;
+}
+
+#zong .feedBack {
+    background: #a9a9a9;
+}
+
+.kong image {
+    width: 134rpx;
+    height: 184rpx;
+    margin-top: 92rpx;
+}
+
+.kong .f24 {
+    margin-top: 40rpx;
+    color: #999;
+}
+
+.kong .btns {
+    border: 1px solid #c28e90;
+    width: 150rpx;
+    height: 58rpx;
+    line-height: 58rpx;
+    margin: 46rpx auto 0;
+    color: #c28e90;
+}
+
+.van-sticky {
+    border: none!important;
+}
+
+.tabs {
+    display: flex;
+    margin-top: 66rpx;
+}
+
+.tabs>view {
+    margin-right: 80rpx;
+    color: #999;
+}
+
+.tabs .active {
+    color: #3d365e;
+}
+
+.flex {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-top: 44rpx;
+    padding-bottom: 160rpx;
+}
+
+.flex,.listFa {
+    display: flex;
+}
+
+.listFa {
+    width: 700rpx;
+    margin-bottom: 40rpx;
+    overflow: auto;
+    white-space: nowrap;
+    height: 584rpx;
+}
+
+.listFa::-webkit-scrollbar {
+    display: none;
+}
+
+.box {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 65rpx;
+    border-radius: 30rpx;
+}
+
+.title {
+    width: 100%;
+    height: 160rpx;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.listFa .list {
+    margin: 0 20rpx;
+    width: 328rpx;
+    height: 428rpx;
+}
+
+.van-tabs__line {
+    background-color: #fff!important;
+}
+
+.listFa .list .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.van-tab__pane {
+    width: 100%!important;
+}
+
+.listFa .list .listImg {
+    width: 328rpx;
+    height: 400rpx;
+    border-radius: 8px;
+}
+
+.listFa .list .listImg image {
+    width: 100%;
+    height: 100%;
+}
+
+.listFa .list .f24 {
+    color: #999;
+    margin-top: 16rpx;
+}
+
+.goods {
+    background: #f5f5f5;
+    height: 150rpx;
+    width: 750rpx;
+}
+
+.goods .title {
+    margin: 0 30rpx;
+    height: 150rpx;
+    width: 690rpx;
+}
+
+.home {
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.dp {
+    padding-bottom: 30rpx;
+    background: #fff;
+    width: 690rpx;
+    height: 400rpx;
+}
+
+.db .logo van-checkbox-group {
+    width: 690rpx;
+    height: 176rpx;
+}
+
+.dp_list {
+    background: #fff;
+}
+
+.good_list {
+    display: flex;
+    align-items: center;
+    padding-top: 62rpx;
+}
+
+.good_list .goodname {
+    width: 80rpx;
+    height: 167rpx;
+    margin-left: 58rpx;
+    margin-right: 62rpx;
+}
+
+.van-hairline--top-bottom:after {
+    border-bottom: none!important;
+    border-top: 1px solid #f6f6f6;
+}
+
+.amout text {
+    color: #c28e90;
+}
+
+.amout {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amout,.bottom_flex {
+    display: flex;
+}
+
+.bottom_flex {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    height: 110rpx;
+}
+
+.bottom_flex .js_btn {
+    width: 255rpx;
+    height: 100%;
+    background: #3d365e;
+    color: #fff;
+    font-size: 36rpx;
+    line-height: 110rpx;
+    text-align: center;
+}
+
+.bottom_flex .left {
+    margin-left: 60rpx;
+}
+
+.amouts,.bottom_flex .left {
+    display: flex;
+    align-items: center;
+}
+
+.amouts {
+    justify-content: center;
+}
+
+.amouts text {
+    color: #c28e90;
+}
+
+.van-checkbox__icon--checked {
+    background-color: #c28e90!important;
+    border: 1px solid #c28e90!important;
+}
+
+.good_list .van-checkbox,.van-checkbox__icon-wrap,.van-stepper__minus,.van-stepper__plus {
+    border-radius: 50%!important;
+}
+
+#shop {
+    width: 750rpx;
+    background: #f5f5f5;
+    margin-bottom: 147rpx;
+}
+
+#shop .shp {
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin: 0 30rpx 1rpx;
+    border-radius: 10rpx;
+}
+
+#shop .shop-item {
+    width: 690rpx;
+}
+
+#shop .shop-item,#shop .shop-item .pd {
+    display: flex;
+    border-top-right-radius: 10rpx;
+    border-top-left-radius: 10rpx;
+    background: #fff;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0rpx 30rpx;
+}
+
+#shop .shop-item .pd {
+    width: 630rpx;
+    hyphens: 250rpx;
+}
+
+.box_right {
+    width: 80px;
+    display: flex;
+    height: 250rpx;
+    justify-content: center;
+    align-items: center;
+}
+
+#shop .shop-item .img {
+    width: 30%;
+    margin-right: 17rpx;
+}
+
+#shop .shop-item .img image {
+    width: 100%;
+    height: 200rpx;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#shop .shop-item .img image,#shop .shop-item .shuju {
+    display: flex;
+    justify-content: center;
+}
+
+#shop .shop-item .shuju {
+    width: 70%;
+    height: 250rpx;
+    flex-direction: column;
+}
+
+#shop .shop-item .shuju .left {
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 10rpx;
+}
+
+#shop .shop-item .shuju .left,#shop .shop-item .shuju .left .name {
+    width: 310rpx;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #333;
+}
+
+#shop .shop-item .shuju .left .name {
+    height: 50rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#shop .shop-item .shuju .left .xh {
+    width: 310rpx;
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #999;
+    line-height: 50rpx;
+}
+
+#shop .shop-item .shuju .logo {
+    margin-top: 16rpx;
+    color: #999;
+    font-size: 24rpx;
+}
+
+#shop .shop-item .shuju .right {
+    font-size: 32rpx;
+    display: flex;
+    width: 100%;
+    margin-left: 10rpx;
+    height: 80rpx;
+    margin-top: 30rpx;
+    justify-content: space-between;
+}
+
+#shop .shop-item .shuju .right .price {
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 700;
+    color: #c28e90;
+    line-height: 50rpx;
+}
+
+#shop .shop-item .shuju .right .count,#shop .shop-item .shuju .right .price {
+    display: flex;
+    align-items: center;
+}
+
+#shop .shop-item .shuju .right .count {
+    width: 222rpx;
+    justify-content: center;
+}
+
+#shop .shop-item .shuju .right .count .buttomOne,#shop .shop-item .shuju .right .count .buttomTwo {
+    width: 32rpx;
+    height: 32rpx;
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#shop .shop-item .shuju .right .count .buttomOne view,#shop .shop-item .shuju .right .count .buttomTwo view {
+    width: 32rpx;
+    height: 32rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 7rpx;
+}
+
+#shop .shop-item .shuju .right .input {
+    margin: 0 20rpx;
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #333;
+}
+
+#zong {
+    width: 100%;
+    height: 128rpx;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#zong .checkAll-item {
+    width: 70%;
+}
+
+#zong .checkAll-item,.calculate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculate {
+    width: 30%;
+    height: 128rpx;
+    background: #3d365e;
+    color: #fff;
+}
+
+#zong .shu .price {
+    width: 146rpx;
+    height: 22rpx;
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 700;
+    color: #c28e90;
+    line-height: 26rpx;
+}
+
+#zong .shu {
+    margin-left: 89rpx;
+    width: 50%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.CuImg {
+    width: 750rpx;
+    height: 500rpx;
+    display: flex;
+    align-items: center;
+}
+
+.CuImg image {
+    width: 100%;
+    height: 100%;
+}

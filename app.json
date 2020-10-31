@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/detail/detail",
+    "pages/customization/customization",
+    "pages/cupdetail/cupdetail",
+    "pages/cupcustomization/cupcustomization",
+    "pages/shirtdetail/shirtdetail",
+    "pages/shirtcustomization/shirtcustomization",
+    "pages/addbank/index",
+    "pages/AddressGl/index",
+    "pages/Aftersale/index",
+    "pages/banklist/index",
+    "pages/bank_detail/index",
+    "pages/changeaddress/index",
+    "pages/Distribution/index",
+    "pages/privacy/privacy",
+    "pages/register/register",
+    "pages/index/index",
+    "pages/me/index",
+    "pages/order/index",
+    "pages/orderSub/index",
+    "pages/orderdel/index",
+    "pages/userEvaluation/userEvaluation",
+    "pages/paysue/index",
+    "pages/creation/creation",
+    "pages/innovate/innovate",
+    "pages/recording/index",
+    "pages/logistics/logistics",
+    "pages/amount/amount",
+    "pages/shop/index",
+    "pages/conList/index",
+    "pages/extract_log/index",
+    "pages/withdraw/index",
+    "pages/discuss/discuss",
+    "pages/orderDetails/orderDetails",
+    "pages/editAddress/editAddress",
+    "components/cropper/cropper",
+    "components/inputs/inputs",
+    "components/canvas/canvas"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "弥点定制",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/icons/01.png",
+        "selectedIconPath": "images/icons/11.png"
+      },
+      {
+        "pagePath": "pages/shop/index",
+        "text": "购物车",
+        "iconPath": "images/icons/02.png",
+        "selectedIconPath": "images/icons/12.png"
+      },
+      {
+        "pagePath": "pages/conList/index",
+        "text": "领卷中心",
+        "iconPath": "images/icons/03.png",
+        "selectedIconPath": "images/icons/13.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的",
+        "iconPath": "images/icons/04.png",
+        "selectedIconPath": "images/icons/14.png"
+      }
+    ],
+    "selectedColor": "#3D365E"
+  },
+  "sitemapLocation": "sitemap.json"
+}

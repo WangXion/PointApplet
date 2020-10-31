@@ -1,0 +1,91 @@
+<view>
+    <view class="top">
+        <view class="user">
+            <view>
+                <image class="user_img" src="{{user.avatar}}"></image>
+            </view>
+            <view class="f32" style="color:#fff;margin-top:30rpx">
+				{{user.nickname}}
+			</view>
+        </view>
+        <image class="bj" src="https://shop.io.mi-img.com/app/shop/img?id=shop_70e2fa2a6f64e4b333e76c4e0b3ccdec.png"></image>
+    </view>
+    <view class="income">
+        <view class="f30 ta" style="color:#3D365E;padding-top:40rpx">当前佣金（元）</view>
+        <view class=" ta" style="color:#3D365E;padding-top:40rpx;font-size:50rpx">{{user.promoter_price}}</view>
+        <view bindtap="navto" class=" btns" data-name="withdraw">
+			立即提现
+		</view>
+        <view class="p30 btns_list">
+            <view>
+                <view class="f24">昨日收益（元）</view>
+                <view class="f30">{{user.yesterDay}}</view>
+            </view>
+            <navigator url="/pages/extract_log/index">
+                <view class="f24">累计已提（元）</view>
+                <view class="f30">{{user.extractTotalPrice}}</view>
+            </navigator>
+        </view>
+    </view>
+    <view class="user_list">
+        <view class="user_top" style="display:block">
+            <view class="box">
+                <van-tabs animated swipeable color="#C28E90" >
+                    <van-tab title="推广订单">
+                        <view class="listFa" style="flex-direction:row;" wx:if="{{break.length==0?true:false}}">
+                            <view class="kong ta">
+                                <image src="/images/user/tg.png"></image>
+                                <view class="f24 ta">您还没有推广任何订单哦~</view>
+                                <view bindtap="clickTg" class="btns">  
+									立即推广
+								</view>
+                            </view>
+                        </view>
+                        <view class="listFa"  style="flex-direction:row;" wx:if="{{break.length!=0?true:false}}">
+                            <view class="kong ta">
+                                <image src="/images/user/tg.png"></image>
+                                <view class="f24 ta">有数据还没有样式~</view>
+                                <view bindtap="clickTg" class="btns">  
+									立即推广
+								</view>
+                            </view>
+                        </view>
+                    </van-tab>
+                    <van-tab title="推广用户">
+                        <view class="listFa" style="flex-direction:row;">
+                            <view>
+                                         <view class="usernamelist" style="justify-content: center;color:#999999;height: 430rpx;" wx:if="{{tg_peoplleng==0?true:false}}">
+                                    <view>
+                                        <!-- <image src="{{item.avatar}}"></image> -->
+                                        <view style="margin-left:20rpx">
+                                            <view class="f26" style="font-size:30rpx">暂无推广用户</view>
+                                        </view>
+                                    </view>
+                                    <view class="f24" style="color:#999999">{{item.time}}</view>
+                                </view>
+                                           <view class="usernamelist" wx:for="{{tg_peopl.list}}" wx:key="uid" wx:if="{{tg_peoplleng!=0?true:false}}">
+                                    <view>
+                                        <image src="{{item.avatar}}"></image>
+                                        <view style="margin-left:20rpx">
+                                            <view class="f26">{{item.nickname}}</view>
+                                            <view class="f24" style="color:#C28E90;margin-top:20rpx">直接好友</view>
+                                        </view>
+                                    </view>
+                                    <view class="f24" style="color:#999999">{{item.time}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </van-tab>
+                </van-tabs>
+            </view>
+        </view>
+    </view>
+    <van-overlay bind:click="onClickHide" show="{{show}}">
+        <view class="wrapper" >
+            <image src="{{spread[0].poster}}"></image>
+            <view>
+                <image bind:click="onClickHide" src="/images/user/g.png" style="width:54rpx;height:54rpx;margin-top:14rpx"></image>
+            </view>
+        </view>
+    </van-overlay>
+</view>

@@ -1,0 +1,67 @@
+page {
+    background-color: #f1f1f1;
+}
+
+.content_money {
+    display: flex;
+    margin: 0 20rpx;
+    background-color: #bd9193;
+}
+.content_moneys {
+    display: flex;
+    margin: 0 20rpx;
+    width: 710rpx;
+    justify-content: center;
+    padding: 200rpx;
+    color: #999999;
+    box-sizing: border-box;
+    
+}
+
+.content_money  .money_title {
+  font-size: 38rpx;
+}
+
+.content_money .money .amount {
+    padding: 10rpx 0 0 30rpx;
+}
+
+.content_money image {
+    width: 20%;
+    height: 20%;
+    padding: 20rpx 0 20rpx 350rpx;
+}
+
+.date {
+    margin: 20rpx 0 10rpx 50rpx;
+    font-size: 25rpx;
+}
+
+.show {
+    display: flex;
+    background-color: #fff;
+    margin: 0rpx 20rpx 0;
+    border-bottom: 1rpx solid #e0e0e0;
+}
+
+.show .show_content {
+    flex: 5;
+}
+
+.show .show_content .title {
+    padding: 20rpx 0 0 20rpx;
+    font-size: 25rpx;
+}
+
+.show .show_content .time {
+    padding: 5rpx 0 20rpx 20rpx;
+    color: #a7a4a4;
+    font-size: 25rpx;
+}
+
+.show .show_money {
+    flex: 1;
+    padding: 35rpx 0 0;
+    color: #279e60;
+    font-size: 25rpx;
+}

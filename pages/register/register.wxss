@@ -1,0 +1,23 @@
+page {
+    background: #f5f5f5;
+}
+
+.privacy {
+    width: 750rpx;
+    box-sizing: border-box;
+    margin-top: 30rpx;
+}
+
+.privacy .privacyItem {
+    width: 690rpx;
+    height: 500rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin: 0 30rpx;
+    border-radius: 10rpx;
+    font-size: 20rpx;
+    color: grey;
+    line-height: 40rpx;
+    padding: 20rpx;
+    text-indent: 22px;
+}

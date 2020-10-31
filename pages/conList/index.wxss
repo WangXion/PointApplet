@@ -1,0 +1,269 @@
+page {
+    height: 100%;
+    background: #f5f5f5;
+}
+
+.address {
+    background: #fff;
+    margin-top: 30rpx;
+    padding: 40rpx 30rpx 50rpx;
+}
+
+.address_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 32rpx;
+}
+
+.address_top .left {
+    width: 24rpx;
+    height: 30rpx;
+    margin-right: 40rpx;
+}
+
+.address_top .right {
+    width: 18rpx;
+    height: 18rpx;
+}
+
+.address .names {
+    padding-left: 74rpx;
+    margin-top: 37rpx;
+    font-size: 28rpx;
+}
+
+.goods {
+    margin-top: 30rpx;
+    background: #fff;
+    padding-bottom: 40rpx;
+}
+
+.goods_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30rpx;
+    color: #666;
+}
+
+.goods_title image {
+    width: 23rpx;
+    height: 23rpx;
+}
+
+.goodlist {
+    display: flex;
+    padding: 0 58rpx;
+    margin-top: 62rpx;
+}
+
+.goodlist image {
+    width: 79rpx;
+    height: 167rpx;
+    margin-right: 62rpx;
+}
+
+.order {
+    margin-top: 30rpx;
+    background: #fff;
+    padding-bottom: 160rpx;
+}
+
+.list {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    border-radius: 5rpx;
+    margin-top: 49rpx;
+}
+
+.list,.yy {
+    display: flex;
+}
+
+.yy {
+    height: 200rpx;
+    width: 40rpx;
+    position: absolute;
+    left: 211rpx;
+    flex-direction: column;
+}
+
+.yuan {
+    top: -12rpx;
+}
+
+.yuan,.yuan1 {
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    position: absolute;
+}
+
+.yuan1 {
+    bottom: -12rpx;
+}
+
+.list image {
+    width: 10rpx;
+    height: 18rpx;
+}
+
+.bottom_flex {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    height: 128rpx;
+}
+
+.bottom_flex .js_btn {
+    width: 255rpx;
+    height: 100%;
+    background: #3d365e;
+    color: #fff;
+    font-size: 36rpx;
+    line-height: 128rpx;
+    text-align: center;
+}
+
+.bottom_flex .left {
+    margin-left: 60rpx;
+}
+
+.amouts,.bottom_flex .left {
+    display: flex;
+    align-items: center;
+}
+
+.amouts {
+    justify-content: center;
+}
+
+.amouts text {
+    color: #c28e90;
+}
+
+.title_con {
+    padding: 60rpx 30rpx;
+    background: #fff;
+}
+
+.van-popup--bottom {
+    background: #f5f5f5;
+}
+
+.con_list {
+    display: flex;
+    background: #fff;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10rpx;
+}
+
+.con_list .left {
+    color: #c28e90;
+    border-right: 1px dashed #ddd;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.con_list .left,.con_list .left .pricr {
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.con_list .left .pricr {
+    font-size: 40rpx;
+}
+
+.conter {
+    width: 55%;
+    margin: 20rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+.conter text {
+    display: inline-block;
+    background: #c28e90;
+    color: #fff;
+    font-size: 24rpx;
+    padding: 0 8rpx;
+    width: 120rpx;
+    height: 40rpx;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    border-radius: 5rpx;
+}
+
+.conter text,.tiems {
+    align-items: center;
+}
+
+.tiems {
+    display: flex;
+    color: #bababa;
+    justify-content: space-between;
+}
+
+.tiems view:first-child {
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tiems view:nth-child(2) {
+    width: 20%;
+}
+
+.con_list .right {
+    width: 15%;
+    margin-right: 10rpx;
+    font-size: 28rpx;
+}
+
+.con_list .right,.con_list .right view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con_list .right view {
+    width: 100%;
+    height: 46rpx;
+    background: #f5f5f5;
+    border-radius: 10rpx;
+    font-size: 24rpx;
+}
+
+.bg {
+    opacity: .5;
+}
+
+.van-radio__icon--checked {
+    background-color: #c28e90!important;
+    border: 1px solid #c28e90!important;
+}
+
+.kong image {
+    width: 130rpx;
+    height: 178rpx;
+    margin-top: 200rpx;
+}
+
+.kong {
+    padding-bottom: 770rpx;
+}

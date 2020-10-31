@@ -1,0 +1,75 @@
+<view style="padding-bottom:80rpx;margin-top:40rpx">
+    <block wx:for="{{order}}" wx:key="index">
+        <view class="dp">
+            <view class="f28 din" style="padding-bottom:32rpx">
+				订单编号：{{item.order_id}}
+			</view>
+            <view class="dp_list">
+                <view class="good_list" wx:for="{{item.cartInfo}}" wx:key="index">
+                    <image class="goodname" src="{{item.productInfo.image}}"></image>
+                    <view>
+                        <view>{{item.productInfo.store_name}}</view>
+                        <view class="f26" style="color:#999999;margin-top:16rpx">{{item.productInfo.attrInfo.suk}}</view>
+                        <view class="amout_good">
+                            <text class="f32">￥{{item.productInfo.attrInfo.ot_price}}</text>
+                            <view style="color:#999999">
+							x{{item.cart_num}}
+						</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="amout">
+				共{{item.total_num}}件
+				<view>总金额：
+					<text>￥{{item.pay_price}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="types">
+            <van-field readonly bindtap="selectType" border="{{false}}" label="售后类型" placeholder="退货退款" value="{{radio}}"></van-field>
+        </view>
+        <view class="types" style="padding:30rpx;height: 520rpx">
+            <view class="title">申请原因</view>
+            <van-field autosize border bind:change="textarea" placeholder="您可以描述申请售后服务的具体原因(必填)" style="height: 100rpx;" type="textarea" value="{{value}}"></van-field>
+            <view style="margin-top:30rpx">
+                <view class="uploader-img  flex justify-content-start" wx:if="{{pics}}">
+                    <view class="uploader-list">
+                        <view style="margin-right: 47rpx;height: 140rpx;width: 120rpx;" wx:for="{{pics}}" wx:key="index">
+                            <image bindtap="previewImg1" data-index="{{index}}" mode="scaleToFill" src="{{item}}" style="width:120rpx;height:140rpx"></image>
+                            <view bindtap="deleteImg" class="delete" data-index="{{index}}">X
+						     	 </view>
+                        </view>
+                    </view>
+                    <view bindtap="chooseImg" class="upAdd">
+                        <image mode="widthFix" src="/images/detail/xiangJi.jpg" style="width: 100rpx;height: 100rpx;"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="types">
+            <van-field border bind:change="userNname" label="退款联系人" placeholder="退款联系人(必填)" value="{{value}}"></van-field>
+            <van-field border bind:change="userCall" label="联系方式" placeholder="联系方式(必填)" value="{{value}}"></van-field>
+        </view>
+        <view class="Feedback">
+            <view class="title">
+                <view>平台信息</view>
+            </view>
+            <view class="conter">
+                <view> 黄晓锐 18856668899</view>
+                <view>浙江省杭州市余杭区未来科技城有限公司</view>
+            </view>
+        </view>
+        <view bindtap="Aftersale" class="addbtn">提交</view>
+        <van-popup bind:close="onClose" customStyle="height: 50%;" position="bottom" show="{{show}}">
+            <view class="tie">申请原因</view>
+            <van-radio-group bind:change="onChange" value="{{radio}}">
+                <van-cell-group>
+                    <van-cell clickable bind:click="onClick" data-name="{{item}}" title="{{item}}" wx:for="{{reason}}" wx:key="index">
+                        <van-radio checkedColor="#C28E90" name="{{item}}" slot="right-icon"></van-radio>
+                    </van-cell>
+                </van-cell-group>
+            </van-radio-group>
+        </van-popup>
+    </block>
+</view>

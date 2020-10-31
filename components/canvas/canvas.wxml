@@ -1,0 +1,4 @@
+<view class="bgBox" style="height:{{bgBoxHeight}}px; width:{{bgBoxWidth}}px">
+    <image catchtouchmove="moveImgTouchmove" class="movedImg" src="../../images/detail/12.jpg" style="width:{{moveImgW}}px;height:{{moveImgH}}px; left:{{moveImgLeft}}px;top:{{moveImgTop}}px"></image>
+    <image catchtouchmove="scaleTouchmove" class="scaleIcon" src="../../images/detail/12.jpg" style="width:{{scaleIconFixWidth}}px;height:{{scaleIconFixWidth}}px; left:{{scaleLeft}}px; top:{{scaleTop}}px"></image>
+</view>

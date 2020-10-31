@@ -1,0 +1,65 @@
+<view class="top">
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+</view>
+<view>
+    <view class="list" wx:for="{{address}}" wx:key="index">
+        <van-swipe-cell rightWidth="{{85}}">
+            <van-cell-group>
+                <view bindtap="sele" class="content" data-id="{{item.id}}" data-item="{{item}}">
+                    <view class="left">
+                        <view class="f32 name">{{item.real_name}}</view>
+                        <view class="f24 btns" wx:if="{{item.is_default==1?true:false}}">默认</view>
+                    </view>
+                    <view class="right">
+                        <view class="f32 ph">{{item.phone}}</view>
+                        <view class="f24  site">{{item.city}}{{item.province}}{{item.district}}{{item.detail}}</view>
+                    </view>
+                    <view catchtap="editAddress" class="goEit" data-item="{{item}}">
+                        <view hoverClass="bg">
+                            <image mode="aspectFill" src="/images/user/edit.png"></image>
+                        </view>
+                    </view>
+                </view>
+            </van-cell-group>
+            <view bindtap="dele" class="box" data-id="{{item.id}}" slot="right">
+                <view class="box_right">
+                    <image bindtap="dele" data-addressid="{{item.addressId}}" data-index="{{index}}" src="/images/user/btns.png" style="width:60rpx;height:60rpx"></image>
+                </view>
+            </view>
+        </van-swipe-cell>
+    </view>
+    <view bindtap="adddz" class="addbtn" hoverClass="bg">
+		新增地址
+	</view>
+</view>

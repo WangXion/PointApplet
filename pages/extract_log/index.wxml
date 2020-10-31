@@ -1,0 +1,15 @@
+<view>
+    <view class="content_moneys" wx:if="{{recordleng==0?true:false}}">
+            <view class="money_title">暂无提现记录</view>
+    </view>
+    <view wx:for="{{records}}" wx:for-item="vo" wx:key="index" wx:if="{{recordleng!=0?true:false}}">
+        <!-- <view class="date">{{vo.time}}</view> -->
+        <view class="show" wx:for="{{vo.list}}" wx:for-item="val" wx:key="index1">
+            <view class="show_content">
+                <view class="title">{{val.title}}</view>
+                <view class="time">{{val.add_time}}</view>
+            </view>
+            <view class="show_money">+{{val.number}}</view>
+        </view>
+    </view>
+</view>

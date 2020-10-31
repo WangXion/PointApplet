@@ -1,0 +1,280 @@
+page {
+    background: #f5f5f5;
+}
+
+.index-tabs .van-tab--active .van-ellipsis {
+    color: #3d365e;
+    font-size: 32rpx;
+}
+
+.van-tabs .van-tabs__wrap .van-tabs__nav .van-tab {
+    position: relative;
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 0 5px;
+    cursor: pointer;
+    color: #646566;
+    color: var(--tab-text-color,#646566);
+    font-size: 14px;
+    font-size: var(--tab-font-size,14px);
+    line-height: 44px;
+    line-height: var(--tabs-line-height,44px);
+    display: flex;
+    justify-content: left;
+}
+
+.beijing {
+    width: 447rpx;
+    height: 20rpx;
+}
+
+.payBg {
+    background-color: #fff;
+}
+
+.pay_top {
+    text-align: center;
+    padding: 85rpx 60rpx 54rpx;
+    position: relative;
+    height: 65rpx;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -40rpx;
+}
+
+.icons image {
+    width: 65rpx;
+    height: 62rpx;
+}
+
+.btns {
+    margin-top: 85rpx;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 160rpx 80rpx;
+}
+
+.btns view {
+    font-size: 28rpx;
+    padding: 15rpx 25rpx;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.hui {
+    height: 30rpx;
+    background: #f5f5f5;
+}
+
+.title {
+    padding-top: 60rpx;
+}
+
+.tabs {
+    display: flex;
+    margin-top: 66rpx;
+}
+
+.tabs>view {
+    margin-right: 80rpx;
+    color: #999;
+}
+
+.tabs .active {
+    color: #3d365e;
+}
+
+.list {
+    margin-right: 20rpx;
+}
+
+.list image {
+    width: 328rpx;
+    height: 428rpx;
+}
+
+.list .f24 {
+    color: #999;
+    margin-top: 16rpx;
+}
+
+.flex {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-top: 44rpx;
+    padding-bottom: 45rpx;
+}
+
+.flex,.listFa {
+    display: flex;
+}
+
+.listFa {
+    width: 700rpx;
+    margin-bottom: 40rpx;
+    overflow: auto;
+    white-space: nowrap;
+    height: 584rpx;
+}
+
+.listFa::-webkit-scrollbar {
+    display: none;
+}
+
+.box {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 65rpx;
+    border-radius: 30rpx;
+}
+
+.title {
+    width: 100%;
+    height: 160rpx;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.listFa .list {
+    margin: 0 20rpx;
+    width: 328rpx;
+    height: 490rpx;
+    border-radius: 10rpx;
+}
+
+.van-tabs__line {
+    background-color: #fff!important;
+}
+
+.listFa .list .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.van-tab__pane {
+    width: 100%!important;
+}
+
+.listFa .list .listImg {
+    width: 328rpx;
+    height: 400rpx;
+    border-radius: 8px;
+}
+
+.listFa .list .listImg image {
+    width: 100%;
+    height: 100%;
+}
+
+.listFa .list .f24 {
+    color: #999;
+    margin-top: 16rpx;
+}
+
+.goods {
+    background: #f5f5f5;
+}
+
+.home {
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.dp {
+    padding-bottom: 30rpx;
+    background: #fff;
+    width: 690rpx;
+    height: 400rpx;
+}
+
+.db .logo van-checkbox-group {
+    width: 690rpx;
+    height: 176rpx;
+}
+
+.dp_list {
+    background: #fff;
+}
+
+.good_list {
+    display: flex;
+    align-items: center;
+    padding-top: 62rpx;
+}
+
+.good_list .goodname {
+    width: 80rpx;
+    height: 167rpx;
+    margin-left: 58rpx;
+    margin-right: 62rpx;
+}
+
+.van-hairline--top-bottom:after {
+    border-bottom: none!important;
+    border-top: 1px solid #f6f6f6;
+}
+
+.amout text {
+    color: #c28e90;
+}
+
+.amout {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amout,.bottom_flex {
+    display: flex;
+}
+
+.bottom_flex {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    height: 110rpx;
+}
+
+.bottom_flex .js_btn {
+    width: 255rpx;
+    height: 100%;
+    background: #3d365e;
+    color: #fff;
+    font-size: 36rpx;
+    line-height: 110rpx;
+    text-align: center;
+}
+
+.bottom_flex .left {
+    margin-left: 60rpx;
+}
+
+.amouts,.bottom_flex .left {
+    display: flex;
+    align-items: center;
+}
+
+.amouts {
+    justify-content: center;
+}
+
+.amouts text {
+    color: #c28e90;
+}
+
+.van-checkbox__icon--checked {
+    background-color: #c28e90!important;
+    border: 1px solid #c28e90!important;
+}
+
+.good_list .van-checkbox,.van-checkbox__icon-wrap,.van-stepper__minus,.van-stepper__plus {
+    border-radius: 50%!important;
+}

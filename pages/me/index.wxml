@@ -1,0 +1,102 @@
+<view>
+    <view class="top">
+        <view class="user" wx:for="{{user}}" wx:key="index">
+            <view>
+                <image class="user_img" src="{{item.avatar}}"></image>
+            </view>
+            <view class="f32" style="color:#fff">
+							{{item.nickname}}
+						</view>
+            <view class="tishi_text   ">
+                <view bindtap="Distribution" class="view ">
+                    <view class="left">
+                        <image src="/images/user/top.png" style="margin-right:10rpx"></image>分销中心
+					</view>
+                    <view class="right">
+						推荐好友享收益 >
+						</view>
+                </view>
+            </view>
+        </view>
+        <image class="bj" src="https://shop.io.mi-img.com/app/shop/img?id=shop_70e2fa2a6f64e4b333e76c4e0b3ccdec.png"></image>
+    </view>
+    <view class="p30">
+        <view class="order">
+            <view class="order_top">
+				我的订单
+				<view bindtap="navto" data-index="0" data-name="order">查看全部订单
+					<image src="/images/userIcon/icn-right.png"></image>
+                </view>
+            </view>
+            <view class="list p30">
+                <view bindtap="order" class="tb" data-index="1" hoverClass="useBg">
+                    <view class="list_top">
+                        <image src="/images/userIcon/obligation.svg "></image>
+                        <view wx:if="{{unpaid_count>0?true:false}}">{{unpaid_count}}</view>
+                    </view>
+                    <view class="f26 use">待付款</view>
+                </view>
+                <view bindtap="order" class="tb" data-index="2" hoverClass="useBg">
+                    <view class="list_top">
+                        <image src="/images/userIcon/rec.svg"></image>
+                        <view wx:if="{{unshipped_count>0?true:false}}">{{unshipped_count}}</view>
+                    </view>
+                    <view class="f26 use">待发货</view>
+                </view>
+                <view bindtap="order" class="tb" data-index="3" hoverClass="useBg">
+                    <view class="list_top">
+                        <image src="/images/userIcon/track.svg"></image>
+                        <view wx:if="{{received_count>0?true:false}}">{{received_count}}</view>
+                    </view>
+                    <view class="f26 use">待收货</view>
+                </view>
+                <view bindtap="order" class="tb" data-index="4" hoverClass="useBg">
+                    <view class="list_top">
+                        <image src="/images/userIcon/eva.svg"></image>
+                        <view wx:if="{{evaluated_count>0?true:false}}">{{evaluated_count}}</view>
+                    </view>
+                    <view class="f26 use">待评价</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="k_list">
+        <view bindtap="creation" class="tbs" hoverClass="useBg">
+            <view class="item">
+                <image class="itemImg1" mode="aspectFill" src="/images/userIcon/past.svg"></image>
+            </view>
+            <view class="padd">创作历史</view>
+        </view>
+        <view bindtap="navtos" class="tbs" hoverClass="useBg">
+            <view class="item">
+                <image class="itemImg2" mode="aspectFill" src="/images/userIcon/address.svg"></image>
+            </view>
+            <view class="padd">地址管理</view>
+        </view>
+        <view class="tbs">
+            <button bindcontact="handleContact" openType="contact" type="text">
+                <view class="item">
+                    <image class="itemImg3" mode="aspectFill" src="/images/userIcon/service.svg "></image>
+                </view>
+                <view class="service" hoverClass="useBg">在线客服</view>
+            </button>
+        </view>
+        <view bindtap="discount" class="tbs" hoverClass="useBg">
+            <view class="item">
+                <image class="itemImg4" mode="aspectFill" src="/images/userIcon/coupon.svg "></image>
+            </view>
+            <view class="padd" hoverClass="useBg">优惠券</view>
+        </view>
+    </view>
+    <view class="p30" style="margin-top:80rpx">
+        <view class="title">优惠活动</view>
+        <view class="img_list">
+            <view>
+                <image src="/images/user/bottom.png"></image>
+            </view>
+            <view>
+                <image src="/images/user/bottom.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

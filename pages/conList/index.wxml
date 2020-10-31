@@ -1,0 +1,69 @@
+<view>
+    <view wx:if="{{coupon!=null?true:false}}">
+        <view style="padding-bottom:34rpx">
+            <van-tabs animated swipeable active="{{0}}" color="#C28E90">
+                <van-tab title="可用优惠券（{{couponleng}}）">
+                    <view class="list" wx:for="{{coupon}}" wx:key="index">
+                        <view class="con_list">
+                            <view class="left">
+                                <view class="pricr">
+                                    <text>{{item.coupon_price}}</text>元
+				</view>
+                            </view>
+                            <view class="conter">
+                                <view class="f28">{{item.coupon_title}}</view>
+                                <view class="f24" style="margin-top:34rpx ;color: #BABABA;">满{{item.use_min_price}}可使用</view>
+                                <view class="f24 tiems" style="margin-top:16rpx">
+                                    <view>有效期至：{{item._end_time}}</view>
+                                    <text>{{item._msg}}</text>
+                                </view>
+                            </view>
+                            <view class="right">
+                                <view bindtap="goShop" data-id="{{item.id}}" hoverClass="bg">去使用</view>
+                            </view>
+                        </view>
+                        <view class="yy">
+                            <view class="yuan"></view>
+                            <view class="yuan1"></view>
+                        </view>
+                    </view>
+                </van-tab>
+                <van-tab title="不可用优惠券（{{noCouponleng}}）">
+                    <view class="list" wx:for="{{noCoupon}}" wx:key="index">
+                        <view class="con_list">
+                            <view class="left">
+                                <view class="pricr">
+                                    <text>{{item.coupon_price}}</text>元
+				 </view>
+                            </view>
+                            <view class="conter">
+                                <view class="f28">{{item.coupon_title}}</view>
+                                <view class="f24" style="margin-top:34rpx ;color: #BABABA;">满{{item.use_min_price}}可使用</view>
+                                <view class="f24 tiems" style="margin-top:16rpx">
+                                    <view>有效期至：{{item._end_time}}</view>
+                                </view>
+                            </view>
+                            <view class="right">
+                                <text class="tiems">{{item._msg}}</text>
+                            </view>
+                        </view>
+                        <view class="yy">
+                            <view class="yuan"></view>
+                            <view class="yuan1"></view>
+                        </view>
+                    </view>
+                </van-tab>
+            </van-tabs>
+        </view>
+    </view>
+    <view class="kong" wx:if="{{coupon==null?true:false}}">
+        <view class="ta">
+            <image src="http://graph.baidu.com/resource/1223b98fabfcfbe87677c01596762740.jpg"></image>
+        </view>
+        <view class="f30 ta" style="margin-top:74rpx">
+			很遗憾地说
+		</view>
+        <view class="f26 ta" style="margin-top:30rpx;color:#999999">您暂无可以使用的优惠券</view>
+        <view class="f24 ta" style="margin-top:200rpx;color:#999999">关注一波“弥点定制”公众号，第一时间了解优惠活动~</view>
+    </view>
+</view>

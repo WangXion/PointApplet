@@ -1,0 +1,81 @@
+<view class="payBg">
+    <view class="pay_top">
+        <image class="beijing" src="/images/user/04.png"></image>
+        <view class="icons">
+            <image src="/images/user/01.png"></image>
+            <image src="/images/user/02.png"></image>
+            <image src="/images/user/03.png"></image>
+        </view>
+    </view>
+    <view class="f36 ta">
+		支付成功
+	</view>
+    <view class="ta f40" style="margin-top:96rpx;color:#C28E90">
+        <text class="f24">￥</text>{{price}}
+	</view>
+    <view class="ta f24">
+		已优惠 <text style="color:#C28E90">￥{{coupon_price}}</text>
+    </view>
+    <view class="btns">
+        <view bindtap="goShop">查看订单</view>
+        <view bindtap="goHome">回到首页</view>
+    </view>
+</view>
+<view class="box">
+    <view style="margin:0 20rpx">
+        <view class="f36 title">为您推荐</view>
+        <van-tabs animated swipeable class="index-tabs">
+            <van-tab title="手机壳">
+                <view class="listFa" style="flex-direction:row;">
+                    <view bindtap="goDetails" class="list" data-id="{{item.id}}" data-name="detail" wx:for="{{call}}" wx:key="index">
+                        <view class="listImg">
+                            <image src="{{item.image}}"></image>
+                        </view>
+                        <view class="bottom">
+                            <view class="f28">
+									{{item.store_name}}
+								</view>
+                            <view class="f24">
+							    {{item.unit_name}}
+								</view>
+                        </view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab title="保温杯">
+                <view class="listFa" style="flex-direction:row;">
+                    <view bindtap="goDetails" class="list" data-id="{{item.product_id}}" wx:for="{{vacuum}}" wx:key="index">
+                        <view class="listImg">
+                            <image src="{{item.image}}"></image>
+                        </view>
+                        <view class="bottom">
+                            <view class="f28">
+									{{item.store_name}}
+								</view>
+                            <view class="f24">
+							    {{item.unit_name}}
+								</view>
+                        </view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab title="T恤">
+                <view class="listFa" style="flex-direction:row;">
+                    <view bindtap="goDetails" class="list" data-id="{{item.product_id}}" wx:for="{{tShirt}}" wx:key="index">
+                        <view class="listImg">
+                            <image src="{{item.image}}"></image>
+                        </view>
+                        <view class="bottom">
+                            <view class="f28">
+									{{item.store_name}}
+								</view>
+                            <view class="f24">
+							    {{item.unit_name}}
+								</view>
+                        </view>
+                    </view>
+                </view>
+            </van-tab>
+        </van-tabs>
+    </view>
+</view>

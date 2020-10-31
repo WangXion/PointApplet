@@ -1,0 +1,13 @@
+.bgBox {
+    border: 2px solid green;
+    height: 400px;
+    width: 99vw;
+}
+
+.movedImg {
+    border: 3px dotted #ffa600;
+}
+
+.movedImg,.scaleIcon {
+    position: absolute;
+}

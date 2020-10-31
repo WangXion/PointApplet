@@ -1,0 +1,105 @@
+page {
+    background-color: #f8f8f8;
+}
+
+.wx_login {
+    width: 46%;
+    background-color: #b52733;
+}
+
+.navigator {
+    width: 46%;
+    height: 80rpx;
+    font-size: 36rpx;
+    font-weight: 700;
+    text-align: center;
+    line-height: 80rpx;
+    background-color: #b7b7b7;
+    color: #fff;
+    border-radius: 40rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authorization {
+    width: 94%;
+    height: 300rpx;
+    margin: 100rpx auto auto;
+}
+
+.authorization_btn {
+    width: 100%;
+    margin-top: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.requst {
+    background-color: #c5c5c5;
+}
+
+.requst,.wx_login {
+    width: 40%;
+    height: 80rpx;
+    color: #fff;
+    border-radius: 40rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wx_login {
+    background-color: #3dbaed;
+    text-align: center;
+}
+
+.feedBack {
+    background: #a9a9a9;
+}
+
+.phone_login {
+    margin-top: 60rpx;
+}
+
+.row {
+    display: flex;
+    justify-content: left;
+}
+
+.row .aa {
+    color: #3dbaed;
+}
+
+.phone_img {
+    width: 65rpx;
+    height: 65rpx;
+    margin: auto;
+}
+
+.phone_txt {
+    width: 300rpx;
+    height: 30rpx;
+    font-size: 30rpx;
+    line-height: 30rpx;
+    color: #888;
+    text-align: center;
+    margin: 25rpx auto auto;
+}
+
+.van-checkbox {
+    margin-right: 27rpx;
+}
+
+.login_bottom {
+    width: 500rpx;
+    height: 30rpx;
+    position: fixed;
+    bottom: 150rpx;
+    left: 22%;
+    line-height: 30rpx;
+    color: #888;
+    font-size: 26rpx;
+    margin-top: 100rpx;
+}

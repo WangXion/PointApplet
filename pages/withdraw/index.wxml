@@ -1,0 +1,59 @@
+<view style="padding-bottom:100rpx">
+    <view class="top">
+        <view class="user">
+            <view>
+                <view class="f30" style="color:#BBBBBB">可提现金额（元）</view>
+            </view>
+            <view style="color:#fff;margin-top:40rpx;font-size:50rpx">
+			{{userData.broken_commission}}
+			</view>
+        </view>
+        <image class="bj" src="https://shop.io.mi-img.com/app/shop/img?id=shop_70e2fa2a6f64e4b333e76c4e0b3ccdec.png"></image>
+    </view>
+    <view class="amout p30">
+        <view class="f26">提现金额</view>
+        <van-field border bind:change="getMoney" inputClass="inputs" label="￥" labelClass="labelclass" placeholder="输入提现金额" value="{{value}}"></van-field>
+    </view>
+    <view class="tx">
+        <van-tabs active="{{active}}" bind:change="onChange" color="#333333">
+            <van-tab title="提现到支付宝">
+                <view style="padding:30rpx">
+                    <van-field border bind:change="getName" label="真实姓名" placeholder="请输入您的真实姓名" value="{{value}}"></van-field>
+                    <van-field border bind:change="getAlipayCode" label="支付宝账号" placeholder="请输入您的支付宝账号" value="{{value}}"></van-field>
+                    <view class="ta f24" style="margin-top:58rpx;color:#999999">*现在申请提现，预计2个小时内到账，实际到账时间以落地行处理结果为准哦~</view>
+                    <view bindtap="Alipay" class="btns" hoverClass="bg" style="margin-top:100rpx;margin-bottom:50rpx">提交</view>
+                </view>
+            </van-tab>
+            <van-tab title="提现到银行卡">
+                <view class="blak_list"  wx:if="{{banklen}}"  bindtap="morelist">
+                    <view style="padding-left: 46rpx;color: #999999;">
+                          请选择你的银行卡
+                    </view>
+                    <view bindtap="morelist" class="edit">
+                        <image class="rr" src="/images/user/rr.png"></image>
+                    </view>
+                </view>
+                <view class="blak_list" wx:for="{{bank}}" wx:key="index"  wx:if="{{site==''?true:false}}" bindtap="morelist"  >
+                    <image class="icon" src="{{item.bank_cate.bank_img}}"></image>
+                    <view>{{item.bank_cate.bank_name}}
+						<text>{{item.bank_card}}</text>
+                    </view>
+                    <view bindtap="morelist" class="edit">
+                        <image class="rr" src="/images/user/rr.png"></image>
+                    </view>
+                </view>
+                <view class="blak_list" wx:for="{{site}}" wx:key="index" bindtap="morelist"  wx:if="{{site!=''?true:false}}"  >
+                    <image class="icon" src="{{item.bank_cate.bank_img}}"></image>
+                    <view>{{item.bank_cate.bank_name}}
+						<text>{{item.bank_card}}</text>
+                    </view>
+                    <view bindtap="morelist" class="edit">
+                        <image class="rr" src="/images/user/rr.png"></image>
+                    </view>
+                </view>
+                <view class="ta f24" style="margin-top:58rpx;color:#999999">*现在申请提现，预计2个小时内到账，实际到账时间以落地行处理结果为准哦~</view>
+                <view bindtap="handleBank" class="btns" hoverClass="bg" style="margin-top:100rpx;margin-bottom:100rpx">立即提现</view>
+            </van-tab>
+        </van-tabs>
+    </view>
+</view>

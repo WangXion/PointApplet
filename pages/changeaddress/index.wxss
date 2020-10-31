@@ -1,0 +1,60 @@
+page {
+    height: 100%;
+    background: #f5f5f5;
+}
+
+.forms {
+    padding: 20rpx;
+}
+
+.bg {
+    opacity: .5;
+}
+
+.van-checkbox {
+    justify-content: flex-end;
+}
+
+.btns {
+    padding: 0 114rpx;
+    margin-top: 158rpx;
+}
+
+.btns image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.btns>view {
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 32rpx;
+    text-align: center;
+}
+
+.btns>view:first-child {
+    background: #3d365e;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 40rpx;
+}
+
+.btns>view:last-child {
+    background: #09bb07;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btns>view:last-child,.btns>view:last-child view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns>view:last-child view {
+    width: 46rpx;
+    height: 46rpx;
+    border-radius: 50%;
+    background: #fff;
+    margin-right: 20rpx;
+}

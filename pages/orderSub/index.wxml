@@ -1,0 +1,140 @@
+<view>
+    <view class="p30">
+        <view bindtap="changeaddress" class="address">
+            <view class="address_top" wx:if="{{idDr==null?true:false}}">
+                <view>
+                    <image class="left" src="/images/user/dz.png"></image>
+					请选择收货地址
+				</view>
+                <image class="right" src="/images/user/r.png"></image>
+            </view>
+            <view class="names" wx:for="{{site==null?sites:site}}" wx:key="index">
+                <view class="img">
+                    <image class="left" mode="widthFix" src="/images/user/dz.png"></image>
+                </view>
+                <view class="view">
+                    <view class="bt">
+                        <view>{{item.province}}{{item.city}}{{item.district}}{{item.detail}}</view>
+                        <image src="/images/user/r.png"></image>
+                    </view>
+                    <text>{{item.real_name}}</text>
+						{{item.phone}}
+					</view>
+            </view>
+        </view>
+        <view class="goods" wx:for="{{totalNums}}" wx:key="index">
+            <view class="goods_title f28">
+                <view style="color:#333333;display: flex;align-items: center;">
+                    <image mode="aspectFill" src="/images/user/img.png" style="margin-right:5rpx"></image>{{item.productInfo.cate_name}}
+				</view>
+				共{{totalnum}}件
+			</view>
+            <view class="goodlist">
+                <view class="img">
+                    <image mode="aspectFill" src="{{item.productInfo.image}}"></image>
+                </view>
+                <view>
+                    <view class="f32">{{item.productInfo.store_name}}</view>
+                    <view class="f26" style="color:#999999;margin-top:17rpx">{{item.productInfo.attrInfo.suk}}</view>
+                    <view class="price">
+                        <view style="color:#C28E90">￥{{item.productInfo.price}}</view>
+                        <view style="color:#666666">x{{item.cart_num}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="order">
+            <view class="list">
+				商品金额
+				<view wx:if="{{isTrue==false?true:false}}">￥{{newtotalPrice}}
+					<image src="/images/user/r.png"></image>
+                </view>
+                <view wx:if="{{isTrue==true?true:false}}">￥{{newtotalPr}}
+					<image src="/images/user/r.png"></image>
+                </view>
+            </view>
+            <view bindtap="discounts" class="list">
+				优惠券
+				<view style="color:#C28E90" wx:if="{{isTrue==true?true:false}}">-￥{{CouponPrc}}
+					<image src="/images/user/r.png"></image>
+                </view>
+                <view style="color:#C28E90;font-size: 24rpx;" wx:if="{{isTrue==false?true:false}}">选择可用优惠卷
+					<image src="/images/user/r.png"></image>
+                </view>
+            </view>
+            <view class="list">
+				运费
+				<view style="font-size: 26rpx;" wx:if="{{priceGroup==0?true:false}}">免运费</view>
+                <view wx:if="{{priceGroup!=0?true:false}}">{{priceGroup}}元</view>
+            </view>
+            <view class="list">
+				留言 <input bind:change="leave" class="f24 " placeholder="建议留言前先与商家沟通确认" style="z-index: 0;color:#999999;width: 70%;"></input>
+            </view>
+            <view class="lists">
+                <view style="display:flex;align-items: center;justify-content: right;position: absolute;right: 25rpx;">
+                    <view>合计：</view>
+                    <view style="color:#C28E90">￥{{newtotalPrice}}
+					</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom_flex">
+        <view class="amouts" style="flex:auto ;z-index:10">
+			合计：
+			<text>￥{{newtotalPrice}}</text>
+        </view>
+        <view bindtap="navto" class="js_btn" wx:if="{{isTrue==false?true:false}}">
+			提交订单
+		</view>
+        <view bindtap="navtoPay" class="js_btn" wx:if="{{isTrue==true?true:false}}">
+			提交订单
+		</view>
+    </view>
+    <van-popup bind:close="onClose" customStyle="height: 70%" position="bottom" show="{{show}}">
+        <view class="title_con f36">
+			优惠券
+		</view>
+        <view style="padding-bottom:34rpx">
+            <van-tabs active="{{active}}" bind:change="onChange" color="#C28E90">
+                <van-tab title="可用优惠券（{{usableCouponleng}}）">
+                    <radio-group bind:change="onChanges" wx:if="{{usableCouponleng!=0?true:false}}">
+                        <view style="background: #f5f5f5f5;padding-bottom: 400rpx;">
+                            <view class="list" wx:for="{{usableCoupon}}" wx:key="index">
+                                <view class="con_list">
+                                    <view class="left">
+                                        <view class="f28" style="display: flex;align-items: center;">
+                                            <text>{{item.coupon_price}}</text>元
+										</view>
+                                        <view class="f24"></view>
+                                    </view>
+                                    <view class="conter">
+                                        <view style="display:flex;font-size: 38rpx;">{{item.coupon_title}}</view>
+                                        <view class="f24" style="margin-top:34rpx;height: 13rpx;"></view>
+                                        <view class="tiems" style="margin-top:16rpx">
+                                            <view>有效期至：{{item.end_time}}</view>
+                                            <view>可用</view>
+                                        </view>
+                                    </view>
+                                    <view class="right" data-index="{{index}}" data-item="{{item}}">
+                                        <radio class="checked" color="#C28E90" value="{{item.id}}"></radio>
+                                    </view>
+                                    <view class="yy">
+                                        <view class="yuan"></view>
+                                        <view class="yuan1"></view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </radio-group>
+                    <view class="CuImg" wx:if="{{usableCouponleng==0?true:false}}">
+                        <image src="http://graph.baidu.com/resource/1223b98fabfcfbe87677c01596762740.jpg"></image>
+                        <view>暂无优惠卷</view>
+                    </view>
+                </van-tab>
+                <van-tab title="不可用优惠券（0）"></van-tab>
+            </van-tabs>
+        </view>
+        <view class="kong"></view>
+    </van-popup>
+</view>

@@ -1,0 +1,150 @@
+page {
+    background-color: #f5f5f5;
+}
+
+#swiper {
+    width: 750rpx;
+    height: 924rpx;
+    z-index: 10;
+}
+
+.feedBack {
+    background: #eee;
+}
+
+#swiper .swiperOne,#swiper .swiperOne image {
+    width: 750rpx;
+    height: 924rpx;
+}
+
+.nav {
+    position: relative;
+    width: 750rpx;
+    height: 374rpx;
+    top: -44px;
+}
+
+.nav .out {
+    display: flex;
+    width: 690rpx;
+    height: 358rpx;
+    white-space: nowrap;
+    z-index: 10;
+    overflow: auto;
+    box-shadow: 0 7rpx 10rpx 0 rgba(0,0,0,.05);
+    background: #fff;
+    border-radius: 5rpx;
+    margin: 0 30rpx;
+}
+
+.bg {
+    opacity: .5;
+}
+
+.nav .out::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.nav .out .box {
+    height: 358rpx;
+    margin-left: 20rpx;
+    text-align: center;
+    width: 230rpx;
+}
+
+.nav .out .navImg-size {
+    width: 204rpx;
+    height: 214rpx;
+    margin-bottom: 15rpx;
+}
+
+.nav .out .box .navImg {
+    width: 204rpx;
+    height: 214rpx;
+    text-align: center;
+    padding: 31.5rpx 0;
+}
+
+.navImg {
+    width: 73rpx;
+    height: 151rpx;
+}
+
+.nav .out .box .name {
+    width: 206rpx;
+    height: 37rpx;
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    padding: 20rpx 0;
+    color: #3d365e;
+    line-height: 26rpx;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.nav .out .box .price {
+    width: 206rpx;
+    font-size: 24rpx;
+    font-family: PingFang SC;
+    font-weight: 700;
+    color: #c28e90;
+    line-height: 20rpx;
+    margin-top: -8rpx;
+    margin-bottom: 8rpx;
+}
+
+.content {
+    margin-top: -24px;
+    box-sizing: border-box;
+}
+
+.content,.content image {
+    width: 750rpx;
+    height: 924rpx;
+}
+
+.content image {
+    margin-top: 6rpx;
+}
+
+.prev {
+    left: 0;
+    width: 31rpx;
+    border-radius: 50rpx 0 0 50rpx;
+}
+
+.next,.prev {
+    position: absolute;
+    top: 179rpx;
+    transform: translateY(-50%);
+    background-color: #fff;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+}
+
+.next {
+    right: 0rpx;
+    box-sizing: border-box;
+    width: 32rpx;
+    border-radius: 0 50rpx 50rpx 0;
+}
+
+.next image {
+    left: -2rpx;
+}
+
+.next image,.prev image {
+    width: 16rpx;
+    height: 29rpx;
+    position: absolute;
+}
+
+.prev image {
+    right: 0rpx;
+}

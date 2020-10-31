@@ -1,0 +1,152 @@
+page {
+    height: 100%;
+    background: #f5f5f5;
+}
+
+.top {
+    margin: 30rpx;
+    background: #3d365e;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+    border-radius: 5px;
+    color: #fff;
+    padding: 40rpx 30rpx;
+}
+
+.top .text {
+    display: flex;
+    margin-top: 30rpx;
+    padding-bottom: 30rpx;
+}
+
+.dizhi {
+    background: #fff;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+    border-radius: 5px;
+    margin: 0 30rpx;
+    padding: 30rpx;
+}
+
+.dz_top {
+    display: flex;
+    align-items: center;
+}
+
+.dz_top view {
+    margin-left: 18rpx;
+}
+
+.dz_top image {
+    width: 26rpx;
+    height: 32rpx;
+}
+
+.dp {
+    margin: 30rpx;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+}
+
+.dp,.dp_list {
+    background: #fff;
+}
+
+.dp_list {
+    padding: 30rpx;
+    border-radius: 5rpx;
+}
+
+.good_list {
+    display: flex;
+    align-items: center;
+    height: 167rpx;
+}
+
+.good_list .goodname {
+    margin-left: 58rpx;
+    margin-right: 62rpx;
+    width: 23%;
+    height: 100%;
+}
+
+.home {
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.amout text {
+    color: #c28e90;
+}
+
+.amout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order_del {
+    margin: 30rpx;
+    background: #fff;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+    border-radius: 5px;
+    padding: 0 30rpx;
+}
+
+.order_del>view {
+    padding: 26rpx 0;
+    border-bottom: 1px solid #eee;
+    font-size: 26rpx;
+}
+
+.btns,.order_del>view {
+    display: flex;
+    align-items: center;
+}
+
+.btns {
+    justify-content: flex-end;
+    margin-top: 30rpx;
+    background: #fff;
+    padding: 30rpx;
+    margin-bottom: 77rpx;
+}
+
+.btns view {
+    font-size: 28rpx;
+    padding: 22rpx 25rpx;
+    border: 1px solid #eee;
+    margin-left: 20rpx;
+}
+
+.btns .pay {
+    background: #c28e90;
+    color: #fff;
+}
+
+.Logistics {
+    background: #fff;
+    padding: 0 30rpx;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+    border-radius: 5px;
+    margin: 30rpx 30rpx 122rpx;
+}
+
+.Logistics>.title,.order_xx {
+    display: flex;
+    align-items: center;
+    padding: 30rpx 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order_xx {
+    justify-content: space-between;
+}
+
+.order_xx view {
+    height: 56rpx;
+    line-height: 56rpx;
+    width: 400rpx;
+    background: #eee;
+    border-radius: 5px;
+    font-size: 24rpx;
+    text-align: center;
+    color: #333;
+}

@@ -1,0 +1,295 @@
+page {
+    height: 100%;
+    background: #f5f5f5;
+}
+
+.address {
+    background: #fff;
+    margin-top: 30rpx;
+    padding: 40rpx 30rpx 50rpx;
+}
+
+.address_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 32rpx;
+}
+
+.address_top .left {
+    width: 24rpx;
+    height: 30rpx;
+    margin-right: 40rpx;
+}
+
+.address_top .right {
+    width: 18rpx;
+    height: 18rpx;
+}
+
+.address .names,.address .names .view {
+    font-size: 28rpx;
+    display: flex;
+}
+
+.address .names .view {
+    padding-left: 30rpx;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.address .names .img {
+    width: 30rpx;
+    height: 35rpx;
+}
+
+.address .names .img image {
+    width: 30rpx;
+    height: 37rpx;
+}
+
+.address .names .img image,.bt {
+    display: flex;
+    align-items: center;
+}
+
+.bt {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 550rpx;
+    justify-content: space-between;
+}
+
+.bt image {
+    width: 10rpx;
+    height: 18rpx;
+}
+
+.goods {
+    margin-top: 30rpx;
+    background: #fff;
+    padding-bottom: 40rpx;
+    border-radius: 5rpx;
+}
+
+.goods_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30rpx;
+    color: #666;
+}
+
+.goods_title image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.goodlist {
+    padding: 0 58rpx;
+    margin-top: 62rpx;
+}
+
+.goodlist,.goodlist .img {
+    display: flex;
+}
+
+.goodlist .img {
+    width: 130rpx;
+    height: 192rpx;
+    margin-right: 62rpx;
+    justify-content: center;
+}
+
+.goodlist image {
+    width: 93rpx;
+    height: 180rpx;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35rpx;
+    width: 380rpx;
+}
+
+.order {
+    margin-top: 30rpx;
+    background: #fff;
+    padding-bottom: 160rpx;
+}
+
+.list {
+    justify-content: space-between;
+}
+
+.list,.lists {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.lists {
+    padding: 30rpx;
+    justify-content: right;
+}
+
+.list image {
+    width: 10rpx;
+    height: 18rpx;
+}
+
+.yy {
+    height: 200rpx;
+    width: 40rpx;
+    position: absolute;
+    left: 141rpx;
+    flex-direction: column;
+}
+
+.bottom_flex,.yy {
+    display: flex;
+}
+
+.bottom_flex {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    height: 128rpx;
+}
+
+.bottom_flex .js_btn {
+    width: 255rpx;
+    height: 100%;
+    background: #3d365e;
+    color: #fff;
+    font-size: 36rpx;
+    line-height: 128rpx;
+    text-align: center;
+}
+
+.bottom_flex .left {
+    margin-left: 60rpx;
+}
+
+.amouts,.bottom_flex .left {
+    display: flex;
+    align-items: center;
+}
+
+.amouts {
+    padding-left: 51rpx;
+}
+
+.amouts text {
+    color: #c28e90;
+}
+
+.title_con {
+    padding: 60rpx 30rpx;
+    background: #fff;
+    text-align: center;
+}
+
+.CuImg {
+    width: 750rpx;
+    height: 500rpx;
+    text-align: center;
+}
+
+.CuImg image {
+    width: 134rpx;
+    height: 184rpx;
+    margin: 0 auto;
+}
+
+.van-popup--bottom {
+    background: #f5f5f5;
+}
+
+.list {
+    padding: 30rpx;
+    text-align: right;
+}
+
+.con_list {
+    background: #fff;
+    width: 690rpx;
+    margin-top: 40rpx;
+    border-radius: 10rpx;
+}
+
+.con_list,.con_list .left {
+    display: flex;
+    height: 200rpx;
+}
+
+.con_list .left {
+    color: #c28e90;
+    padding-right: 25rpx;
+    border-right: 1px solid #ddd;
+    align-content: center;
+    justify-content: center;
+    width: 100rpx;
+}
+
+.con_list .left text {
+    font-size: 60rpx;
+}
+
+.conter {
+    padding-left: 48rpx;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conter,.tiems {
+    display: flex;
+    width: 440rpx;
+}
+
+.tiems {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tiems view:first-child {
+    font-size: 24rpx;
+    color: #666;
+}
+
+.tiems view:nth-child(2) {
+    display: inline-block;
+    background: #c28e90;
+    color: #fff;
+    font-size: 24rpx;
+    margin-left: 24rpx;
+    padding: 0 8rpx;
+    width: 100rpx;
+    text-align: center;
+}
+
+.con_list .right {
+    flex: auto;
+    display: flex;
+    align-items: center;
+}
+
+.yuan {
+    top: -12rpx;
+}
+
+.yuan,.yuan1 {
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    position: absolute;
+}
+
+.yuan1 {
+    bottom: -12rpx;
+}

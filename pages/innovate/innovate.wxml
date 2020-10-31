@@ -1,0 +1,5 @@
+<view class="Img">
+    <view class="ImgItem">
+        <image mode="aspectFit" src="{{img}}"></image>
+    </view>
+</view>

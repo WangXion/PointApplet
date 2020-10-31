@@ -1,0 +1,249 @@
+.top {
+    height: 350rpx;
+    width: 100%;
+    position: relative;
+}
+
+.top .bj {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+}
+
+.user {
+    text-align: center;
+    padding-top: 55rpx;
+}
+
+.user .user_img {
+    width: 112rpx;
+    height: 112rpx;
+    border-radius: 50%;
+}
+
+.user text {
+    color: #fff;
+}
+
+.tishi_text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.tishi_text .view {
+    display: flex;
+    align-items: center;
+    background: #3d365e;
+    justify-content: space-between;
+    margin: 0 30rpx;
+    padding: 14rpx 30rpx;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.tishi_text .left image {
+    width: 25rpx;
+    height: 25rpx;
+}
+
+.tishi_text .left {
+    font-size: 32rpx;
+    font-weight: 700;
+    color: #faca6d;
+}
+
+.tishi_text .right {
+    font-size: 24rpx;
+    color: #faca6d;
+    margin-right: 20rpx;
+}
+
+.tishi_text .right image {
+    width: 15rpx;
+    height: 15rpx;
+    margin-left: 20rpx;
+}
+
+page {
+    height: 100%;
+    background: #f5f5f5;
+}
+
+.order_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 36rpx;
+    padding: 30rpx;
+    border-bottom: 1px solid #eee;
+}
+
+.order_top view {
+    font-size: 26rpx;
+}
+
+.tb {
+    flex-direction: column;
+    padding-bottom: 30rpx;
+    font-size: 26rpx;
+    margin-top: 20rpx;
+}
+
+.tb,.tb .use {
+    width: 100rpx;
+    display: flex;
+    align-items: center;
+}
+
+.tb .use {
+    height: 30rpx;
+    text-align: center;
+    padding: 5rpx 0;
+    justify-content: center;
+}
+
+.tbs {
+    width: 120rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 26rpx;
+    margin-top: 20rpx;
+}
+
+.tbs .padd,.tbs .service {
+    padding: 0 5rpx;
+    text-align: center;
+    width: 120rpx;
+    margin-top: 20rpx;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order_top image {
+    width: 12rpx;
+    height: 20rpx;
+}
+
+.order {
+    background: #fff;
+    margin-top: 30rpx;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+    border-radius: 5px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+
+button:after {
+    border: none;
+}
+
+.list .useBg,.useBg {
+    opacity: .5;
+}
+
+.button-hover {
+    background: #fff;
+}
+
+button {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: inherit;
+    background-color: #fff;
+    outline: none;
+    font-size: 26rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list image {
+    width: 48rpx;
+    height: 45rpx;
+}
+
+.list_top {
+    text-align: center;
+    position: relative;
+    padding-top: 40rpx;
+}
+
+.list_top view {
+    position: absolute;
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    border: 1px solid #c79799;
+    color: #c79799;
+    font-size: 24rpx;
+    top: 10px;
+    right: -22rpx;
+    align-items: center;
+    justify-content: center;
+}
+
+.k_list,.list_top view {
+    background: #fff;
+    display: flex;
+}
+
+.k_list {
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+    border-radius: 4px;
+    margin: 30rpx 30rpx 0;
+    justify-content: space-between;
+    padding: 30rpx;
+    text-align: center;
+}
+
+.item,.k_list image {
+    width: 88rpx;
+    height: 88rpx;
+}
+
+.item {
+    border-radius: 50%;
+    background-color: #edeaef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item .itemImg1,.item .itemImg2,.item .itemImg3,.item .itemImg4 {
+    width: 88rpx;
+    height: 88rpx;
+}
+
+.title {
+    font-size: 36rpx;
+}
+
+.img_list {
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    margin-top: 40rpx;
+    padding-bottom: 100rpx;
+}
+
+.img_list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.img_list image {
+    width: 614rpx;
+    height: 214rpx;
+    margin-right: 10rpx;
+}

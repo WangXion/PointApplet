@@ -1,0 +1,64 @@
+<view class="top">
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+    <view class="topItem">
+        <view class="violet"></view>
+        <view class="gray"></view>
+    </view>
+</view>
+<view>
+    <view class="list" wx:for="{{bank}}" wx:key="index">
+        <van-swipe-cell rightWidth="{{60}}">
+            <van-cell-group>
+                <view bindtap="sele" class="content" data-item="{{item}}">
+                    <view class="left">
+                        <image src="{{item.bank_cate.bank_img}}"></image>
+                    </view>
+                    <view class="right">
+                        <view class="f32 ph">{{item.bank_cate.bank_name}}</view>
+                        <view class="f24  site">{{item.bank_card}}</view>
+                    </view>
+                    <view catchtap="editbank" class="goEit" data-id="{{item.id}}">
+                        <view hoverClass="bg">
+                            <image mode="aspectFill" src="/images/user/edit.png"></image>
+                        </view>
+                    </view>
+                </view>
+            </van-cell-group>
+            <view bindtap="del" class="box" data-id="{{item.id}}" slot="right">
+                <view class="box_right">
+                    <image bindtap="del" data-addressid="{{item.addressId}}" data-index="{{index}}" src="/images/user/btns.png" style="width:60rpx;height:60rpx"></image>
+                </view>
+            </view>
+        </van-swipe-cell>
+    </view>
+    <view bindtap="navto" class="btns">
+        <image src="/images/user/add.png"></image>添加银行卡
+	</view>
+</view>

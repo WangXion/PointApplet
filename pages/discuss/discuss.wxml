@@ -1,0 +1,22 @@
+<view class="pin">
+    <view class="All">
+        <view class="All-item" wx:for="{{pin}}" wx:key="index">
+            <view class="userInfo">
+                <image class="userInfo-tou" mode="aspectFill" src="{{item.avatar}}"></image>
+                <view class="userInfo-all">
+                    <text class="userInfo-name">{{item.nickname}}</text>
+                    <view class="userInfo-pinx">
+                        <van-rate readonly color="#D8B2B6" value="{{item.product_score}}"></van-rate>
+                    </view>
+                </view>
+                <view style="width: 690rpx;height: 37rpx;"></view>
+                <view class="tui">{{item.comment}}</view>
+                <view bindtap="preview" class="up" data-img="{{item.pics}}">
+                    <view wx:for="{{item.pics}}" wx:key="index">
+                        <image data-src="{{item}}" src="{{item}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

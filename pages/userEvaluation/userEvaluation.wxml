@@ -1,0 +1,80 @@
+<view style="padding-bottom:80rpx;margin-top:40rpx">
+    <block wx:for="{{order}}" wx:key="index">
+        <view class="top">
+            <view class="f30">{{item._status._title}}</view>
+            <view class="text">
+                <view class="f24">订单信息：</view>
+                <view class="f24">{{item.order_id}}</view>
+            </view>
+            <view class="f24" style="color:#BBBBBB">{{item.add_time_y}}</view>
+        </view>
+        <view class="dizhi">
+            <view class="dz_top">
+                <image src="/images/user/dz.png"></image>
+                <view>
+					{{item.real_name}} {{item.user_phone}}
+				</view>
+            </view>
+            <view class="f24" style="margin-top:24rpx">
+				{{item.user_address}}
+			</view>
+        </view>
+        <view class="dp">
+            <view class="f28 din" style="padding-bottom:32rpx">
+				订单编号：{{item.order_id}}
+			</view>
+            <view class="dp_list">
+                <view class="good_list" wx:for="{{item.cartInfo}}" wx:key="index">
+                    <image class="goodname" src="{{item.productInfo.image}}"></image>
+                    <view>
+                        <view>{{item.productInfo.store_name}}</view>
+                        <view class="f26" style="color:#999999;margin-top:16rpx">{{item.productInfo.attrInfo.suk}}</view>
+                        <view class="amout_good">
+                            <text class="f32">￥{{item.productInfo.attrInfo.ot_price}}</text>
+                            <view style="color:#999999">
+							x{{item.cart_num}}
+						</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="amout">
+				共{{item.total_num}}件
+				<view>总金额：
+					<text>￥{{item.pay_price}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="types">
+            <view class="serveFa">
+                <view class="serve">
+                    <view style="margin-bottom: 10rpx;">服务评价</view>
+                    <van-rate bind:change="serviceChange" color="#D8B2B6" size="{{15}}" value="{{servicevalue}}"></van-rate>
+                </view>
+                <view class="serve">
+                    <view style="margin-bottom: 10rpx;"> 商品评价</view>
+                    <van-rate bind:change="goodsChange" color="#D8B2B6" size="{{15}}" value="{{goodsvalue}}"></van-rate>
+                </view>
+            </view>
+        </view>
+        <view class="types" style="padding:30rpx;height: 520rpx">
+            <view class="title">推荐原因</view>
+            <van-field autosize border bind:change="textarea" placeholder="您可以描述申请售后服务的具体原因(必填)" style="height: 100rpx;" type="textarea" value="{{value}}"></van-field>
+            <view style="margin-top:30rpx">
+                <view class="uploader-img  flex justify-content-start" wx:if="{{pics}}">
+                    <view class="uploader-list">
+                        <view style="margin-right: 47rpx;height: 140rpx;width: 120rpx;" wx:for="{{pics}}" wx:key="index">
+                            <image bindtap="previewImg1" data-index="{{index}}" mode="scaleToFill" src="{{item}}" style="width:120rpx;height:140rpx"></image>
+                            <view bindtap="deleteImg" class="delete" data-index="{{index}}">X
+						     	 </view>
+                        </view>
+                    </view>
+                    <view bindtap="chooseImg" class="upAdd">
+                        <image mode="widthFix" src="/images/detail/xiangJi.jpg" style="width: 100rpx;height: 100rpx;"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="Aftersale" class="addbtn">提交</view>
+    </block>
+</view>

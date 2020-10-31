@@ -1,0 +1,107 @@
+<view>
+    <block wx:for="{{order}}" wx:key="index">
+        <view class="top">
+            <view class="f30">{{item._status._title}}</view>
+            <view class="text">
+                <view class="f24">订单信息：</view>
+                <view class="f24">{{item.order_id}}</view>
+            </view>
+            <view class="f24" style="color:#BBBBBB">{{item.add_time_y}}</view>
+        </view>
+        <view class="dizhi">
+            <view class="dz_top">
+                <image src="/images/user/dz.png"></image>
+                <view>
+					{{item.real_name}} {{item.user_phone}}
+				</view>
+            </view>
+            <view class="f24" style="margin-top:24rpx">
+				{{item.user_address}}
+			</view>
+        </view>
+        <view class="dp" wx:for="{{item.cartInfo}}" wx:key="index">
+            <view class="tie">
+                <view>
+                    <image class="home" mode="aspectFill " src="/images/user/img.png"></image>
+				      {{item.productInfo.cate_name}}
+					 </view>
+                <view style="color: #666666">共{{item.cart_num}}件</view>
+            </view>
+            <view class="dp_list">
+                <view class="good_list">
+                    <image class="goodname" src="{{item.productInfo.image}}"></image>
+                    <view style="flex:auto ;width: 50%;">
+                        <view>{{item.productInfo.store_name}}</view>
+                        <view class="f26" style="color:#999999;margin-top:16rpx;margin-bottom: 8rpx;display: flex;justify-content: space-between;">
+                            <view style="color:#999999">	{{item.productInfo.attrInfo.suk}}</view>
+                            <view>x{{item.cart_num}}</view>
+                        </view>
+                        <view class="amout">
+                            <text class="f32">￥{{item.truePrice}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="order_del">
+            <view>
+                <view>订单编号：</view>{{item.order_id}}
+			</view>
+            <view>
+                <view>下单时间：</view>{{item._add_time}}
+			</view>
+            <view>
+                <view>支付方式：{{item._status._payType}}</view>
+            </view>
+            <view>
+                <view>支付金额：</view>
+                <text style="color: #C28E90">￥{{item.pay_price}}</text>
+            </view>
+        </view>
+        <view class="order_del" wx:if="{{item.status._type==0?true:false}}">
+            <van-field autosize bind:change="onChange" border="{{false}}" label="留言" placeholder="留言" type="textarea" value="{{value}}"></van-field>
+            <van-field bind:change="onChange" border="{{false}}" label="发票" placeholder="发票" value="{{value}}"></van-field>
+        </view>
+        <view class="btns" wx:if="{{item._status._type==0?true:false}}">
+            <view bindtap="rePay">取消支付</view>
+            <view bindtap="navtoPay" class="pay">继续支付</view>
+        </view>
+        <view class="btns" wx:if="{{status==0?true:false}}">
+            <view bindtap="material" class="pay">确认收货</view>
+        </view>
+        <view class="btns" wx:if="{{item._status._type==1?true:false}}">
+            <view bindtap="remind" class="tix">提醒发货</view>
+        </view>
+        <view class="Logistics" wx:if="{{item._status._type==2?true:false}}">
+            <view class="content bgf">
+                <view class="loca">
+                    <view class="left">订单跟踪</view>
+                    <view class="right">
+                        <input disabled bindtap="textPaste" class="inp" data-delivery="{{delivery_id}}" placeholder="{{delivery_name}}：{{delivery_id}}" selectable="true">
+                            <image src="https://cunjifen.oss-cn-beijing.aliyuncs.com/userImg/1597038762190.gif"></image>
+                        </input>
+                    </view>
+                </view>
+                <view style="margin-top: 35rpx;">
+                    <view class="flex list">
+                        <view class="info flex1">
+                            <view>
+                                <view class="title address">交易完成</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view :class="{one: index == 0 && wlInfo.delivery_status == 1}" class="flex list" wx:if="{{list.length>0?true:false}}" wx:for="{{list}}" wx:key="index">
+                        <view class="info flex1">
+                            <view class="title"></view>
+                            <view class="time">
+                                <view class="go">{{item.status}}</view>
+                                <view class="day">{{item.time}}</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view style="font-size: 20rpx;margin-left: 61rpx;" wx:if="{{list.length==0?true:false}}">暂无物流信息</view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

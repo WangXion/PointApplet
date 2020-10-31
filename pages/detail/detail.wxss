@@ -1,0 +1,508 @@
+page {
+    background-color: #f5f5f5;
+    margin-bottom: 206rpx;
+}
+
+page #swiper {
+    width: 750rpx;
+    height: 1000rpx;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+page #swiper .swiperOne,page #swiper .swiperOne image {
+    width: 750rpx;
+    height: 924rpx;
+}
+
+page .detailText {
+    box-sizing: border-box;
+    width: 750rpx;
+    height: 274rpx;
+    background: #fff;
+    margin-top: -74rpx;
+}
+
+page .detailText .detailText-item {
+    display: flex;
+    margin: 0 30rpx;
+    justify-content: space-between;
+}
+
+page .detailText .detailText-item .left {
+    width: 375rpx;
+    height: 229rpx;
+    padding-top: 47rpx;
+}
+
+page .detailText .detailText-item .left .Egname {
+    height: 52rpx;
+    font-size: 20rpx;
+    font-family: BankGothic Lt BT;
+    font-weight: 300;
+}
+
+page .detailText .detailText-item .left .Chname,page .detailText .detailText-item .left .Egname {
+    width: 100%;
+    color: #333;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 7rpx;
+}
+
+page .detailText .detailText-item .left .Chname {
+    height: 62rpx;
+    font-size: 31rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+page .detailText .detailText-item .left .Price {
+    width: 100%;
+    font-size: 46rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #c28e90;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+page .detailText .detailText-item .right {
+    width: 186rpx;
+    margin-top: 52rpx;
+}
+
+page .detailText .detailText-item .right image {
+    width: 186rpx;
+    height: 107rpx;
+    margin-top: 47rpx;
+}
+
+page .pin {
+    width: 750rpx;
+    background: #fff;
+    margin-top: 30rpx;
+}
+
+page .pin .All {
+    margin: 0 30rpx;
+}
+
+page .pin .All .bar {
+    width: 690rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 700;
+    color: #333;
+    line-height: 108rpx;
+    box-shadow: 0 1px 0 0 #eee;
+    margin-bottom: 45rpx;
+    padding-bottom: 36rpx;
+}
+
+page .pin .All .bar image {
+    width: 200rpx;
+    height: 210rpx;
+    margin: 0 auto;
+    display: flex;
+}
+
+page .pin .All .All-item {
+    height: 433rpx;
+    margin-bottom: 47rpx;
+    box-shadow: 0 1px 0 0 #eee;
+}
+
+page .pin .All .All-item .userInfo {
+    height: 100rpx;
+    width: 690rpx;
+    position: relative;
+}
+
+page .pin .All .All-item .userInfo .userInfo-tou {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+}
+
+page .pin .All .All-item .userInfo .userInfo-all {
+    width: 228px;
+    position: absolute;
+    height: 80rpx;
+    top: -7rpx;
+    left: 121rpx;
+}
+
+page .pin .All .All-item .userInfo .userInfo-all .userInfo-name {
+    width: 160rpx;
+    height: 46rpx;
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 700;
+    color: #333;
+    line-height: 26px;
+}
+
+page .pin .All .All-item .userInfo .userInfo-all .userInfo-pinx {
+    position: absolute;
+    left: 0;
+    top: 49rpx;
+    height: 46rpx;
+}
+
+page .pin .All .All-item .userInfo .userInfo-all .userInfo-pinx .van-icon {
+    color: #c17372;
+    font-size: 25rpx;
+}
+
+page .pin .All .All-item .userInfo .userInfo-all .userInfo-pinx .userInfo-pin {
+    width: 20rpx;
+    height: 20rpx;
+    margin-right: 12rpx;
+    padding: 5rpx 0;
+}
+
+page .pin .All .All-item .userInfo .tui {
+    width: 710rpx;
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #777;
+    line-height: 45rpx;
+    margin-top: -33rpx;
+    margin-bottom: 33rpx;
+}
+
+page .pin .All .All-item .userInfo .up {
+    width: 690rpx;
+    box-sizing: border-box;
+    float: left;
+}
+
+page .pin .All .All-item .userInfo .up view {
+    height: 120rpx;
+    width: 160rpx;
+    margin: 20rpx;
+    width: 19%;
+    float: left;
+}
+
+page .pin .All .All-item .userInfo .up image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+
+page .pin .gop {
+    width: 690rpx;
+    height: 82rpx;
+    background: #3d365e;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 82rpx;
+    margin: 0 auto;
+}
+
+page .pin .gop .goto {
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 700;
+    color: #fff;
+}
+
+page .detail {
+    width: 750rpx;
+    margin-top: 100rpx;
+    height: 750rpx;
+    text-align: center;
+}
+
+page .detail image {
+    width: 100%;
+    height: 100%;
+    margin-top: -8rpx;
+}
+
+.goshop {
+    width: 750rpx;
+    position: fixed;
+    bottom: 0;
+    background: #3d365e;
+    box-sizing: border-box;
+}
+
+.goshop .goshop1 {
+    height: 121rpx;
+}
+
+.goshop .goshop1,.goshop .goshop12 {
+    width: 750rpx;
+    background: #3d365e;
+    text-align: center;
+    line-height: 108rpx;
+    box-sizing: border-box;
+}
+
+.goshop .goshop12 {
+    height: 186rpx;
+}
+
+.goshop .goshop1 text,.goshop .goshop12 text {
+    width: 161rpx;
+    height: 34rpx;
+    box-sizing: border-box;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 700;
+    color: #fff;
+    line-height: 26rpx;
+    letter-spacing: 10rpx;
+    position: relative;
+    top: 10rpx;
+}
+
+.content {
+    margin: 0 30rpx;
+}
+
+.content .henxian {
+    width: 130rpx;
+    height: 30rpx;
+    border: none;
+    margin: 24rpx auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .henxian .henxian-item {
+    width: 130rpx;
+    height: 8rpx;
+    border-radius: 6rpx;
+    background-color: #eee;
+}
+
+.content .shangp {
+    width: 663rpx;
+    height: 281rpx;
+    display: flex;
+    margin-top: 70rpx;
+    justify-content: center;
+}
+
+.content .shangp .shangp-img {
+    width: 50%;
+    text-align: right;
+    margin-right: 39rpx;
+    margin-top: -20rpx;
+}
+
+.content .shangp .shangp-img view image {
+    width: 70rpx;
+    height: 157rpx;
+    border-radius: 5px;
+}
+
+.content .shangp .moren {
+    width: 50%;
+}
+
+.content .shangp .moren .price {
+    width: 100%;
+    font-size: 46rpx;
+    font-family: PingFang SC;
+    font-weight: 700;
+    color: #3d365e;
+}
+
+.content .shangp .moren .Version {
+    width: 100%;
+    height: 37rpx;
+    line-height: 160rpx;
+}
+
+.content .pinpai {
+    width: 690rpx;
+    height: 290rpx;
+    margin-top: -70rpx;
+}
+
+.content .pinpai .zhonglei {
+    margin-top: 40rpx;
+    width: 690rpx;
+    float: left;
+    margin-bottom: 40rpx;
+}
+
+.content .pinpai .pplogo {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+}
+
+.content .pinpai .zhonglei {
+    width: 710rpx;
+    height: 116rpx;
+}
+
+.content .pinpai .zhonglei .zhonglei-item {
+    float: left;
+    padding: 0 30rpx;
+    height: 60rpx;
+    background: #f5f5f5;
+    border-radius: 6rpx;
+    line-height: 58rpx;
+    text-align: center;
+    position: relative;
+    margin-right: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.content .pinpai .zhonglei .zhongleItems {
+    background: #3d365e;
+    color: #fff;
+}
+
+.content .pinpai .zhonglei .zhonglei-item .pimg {
+    padding: 0 30rpx;
+    height: 58rpx;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.content .pinpai .xinghao {
+    width: 600rpx;
+    justify-content: space-around;
+    margin-top: 40rpx;
+    margin-bottom: 40rpx;
+}
+
+.content .pinpais {
+    width: 690rpx;
+    height: 500rpx;
+}
+
+.content .pinpais .zhonglei {
+    margin-top: 40rpx;
+    width: 690rpx;
+    float: left;
+    margin-bottom: 40rpx;
+}
+
+.content .pinpais .pplogo {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+}
+
+.content .pinpais .zhonglei {
+    width: 710rpx;
+    height: 116rpx;
+}
+
+.content .pinpais .zhonglei .zhonglei-item {
+    width: 147rpx;
+    height: 60rpx;
+    background: #f5f5f5;
+    border-radius: 6rpx;
+    line-height: 58rpx;
+    text-align: center;
+    position: relative;
+    margin-right: 30rpx;
+    margin-bottom: 30rpx;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.content .pinpais .zhonglei .zhongleItems {
+    background: #3d365e;
+    color: #fff;
+}
+
+.content .pinpais .zhonglei .ccccc {
+    width: 710rpx;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+}
+
+.content .pinpais .zhonglei .ccccc::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.content .pinpais .zhonglei .zhonglei-item .pimg {
+    width: 150rpx;
+    height: 58rpx;
+    border-radius: 5px;
+    position: relative;
+}
+
+.content .pinpais .zhonglei .zhonglei-item .pname {
+    width: 123rpx;
+    height: 60rpx;
+    padding: 0 10rpx;
+}
+
+.content .pinpais .zhonglei .zhonglei-item .pname,.content .shangp .moren .Version {
+    font-size: 24rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.content .shangp .moren .Version {
+    width: 240rpx;
+    color: #999;
+    line-height: 40rpx;
+    margin-left: 10rpx;
+}
+
+.content .pinpais .xinghao {
+    width: 600rpx;
+    justify-content: space-around;
+    margin-top: 40rpx;
+    margin-bottom: 40rpx;
+}
+
+.content .next {
+    width: 690rpx;
+    height: 128rpx;
+    background: #3d365e;
+    border-radius: 5rpx;
+    text-align: center;
+    position: fixed;
+    bottom: 90rpx;
+}
+
+.content .next view {
+    width: 690rpx;
+    height: 128rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 700;
+    color: #fff;
+    line-height: 128rpx;
+}
+
+.content .feedBack {
+    background: #eee!important;
+    border-radius: 10rpx;
+}
+
+.bg {
+    opacity: .5;
+}
+
+.goshop .feedBack {
+    background: #eee!important;
+}

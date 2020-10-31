@@ -1,0 +1,66 @@
+<view id="swiper">
+    <swiper autoplay circular current indicatorDots class="swiperOne" interval="2000">
+        <swiper-item wx:for="{{banner}}" wx:key="index">
+            <image class="img1" mode="widthFix" src="{{item.pic}}"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="nav">
+    <scroll-view scrollWithAnimation scrollIntoView="{{orderIndex}}" scrollX="true">
+        <view class="out">
+            <view bindtap="toDetail" class="box" data-id="{{item.id}}" data-title="{{item.store_name}}" hoverClass="bg" id="{{index}}" wx:for="{{nav}}" wx:key="index">
+                <view class="navImg-size">
+                    <image class="navImg" data-index="{{index}}" src="{{item.image}}"></image>
+                </view>
+                <view class="name">{{item.store_name}}</view>
+                <view class="price">￥{{item.price}}</view>
+            </view>
+        </view>
+    </scroll-view>
+    <view bindtap="goLeft" class="prev" wx:if="{{nav.length<4?false:true}}">
+        <image class="NImg" mode="widthFix" src="../../images/home/icn-left2.png"></image>
+    </view>
+    <view bindtap="goRight" class="next" wx:if="{{nav.length<4?false:true}}">
+        <image class="NImg" mode="widthFix" src="../../images/home/icn-right.png"></image>
+    </view>
+</view>
+<view class="content">
+    <image class="" src="{{contentOne}}"></image>
+</view>
+<scroll-view scrollWithAnimation scrollX class="nav" scrollLeft="{{scrollLeft}}">
+    <view class="out">
+        <view bindtap="cupdetail" class="box" data-id="{{item.id}}" hoverClass="bg" wx:for="{{nav1}}" wx:key="index">
+            <view class="navImg-size">
+                <image class="navImg" src="{{item.image}}"></image>
+            </view>
+            <view class="name">{{item.store_name}}</view>
+            <view class="price">￥{{item.price}}</view>
+        </view>
+    </view>
+    <view class="prev" wx:if="{{nav1.length<4?false:true}}">
+        <image bindtap="goLeft" class="NImg" mode="widthFix" src="../../images/home/icn-left2.png"></image>
+    </view>
+    <view class="next" wx:if="{{nav1.length<4?false:true}}">
+        <image bindtap="goRight" class="NImg" mode="widthFix" src="../../images/home/icn-right.png"></image>
+    </view>
+</scroll-view>
+<view class="content">
+    <image class="" src="{{contentTwo}}"></image>
+</view>
+<scroll-view scrollWithAnimation scrollX class="nav" scrollLeft="{{scrollLeft}}">
+    <view class="out">
+        <view bindtap="shirt" class="box" data-id="{{item.id}}" hoverClass="bg" wx:for="{{nav2}}" wx:key="index">
+            <view class="navImg-size">
+                <image class="navImg" src="{{item.image}}"></image>
+            </view>
+            <view class="name">{{item.store_name}}</view>
+            <view class="price">￥{{item.price}}</view>
+        </view>
+    </view>
+    <view class="prev" wx:if="{{nav2.length<4?false:true}}">
+        <image bindtap="goLeft" class="NImg" mode="widthFix" src="../../images/home/icn-left2.png"></image>
+    </view>
+    <view class="next" wx:if="{{nav2.length<4?false:true}}">
+        <image bindtap="goRight" class="NImg" mode="widthFix" src="../../images/home/icn-right.png"></image>
+    </view>
+</scroll-view>

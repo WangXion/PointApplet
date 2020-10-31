@@ -1,0 +1,120 @@
+.creation,page {
+    background-color: #f5f5f5;
+    width: 750rpx;
+}
+
+.creation .creationItem {
+    width: 690rpx;
+    margin: 20rpx 30rpx;
+}
+
+.creation .creationItem .creationItemSonOne {
+    background-color: #fff;
+    border-radius: 10rpx;
+    margin-bottom: 2rpx;
+}
+
+.creation .creationItem .creationItem_Ti {
+    background-color: #fff;
+    width: 670rpx;
+    height: 100rpx;
+    margin: 0 10rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.creation .creationItem .creationItem_Ti .time {
+    color: #909090;
+}
+
+.creation .creationItem .creationItem_Ti .genre {
+    color: #634898;
+}
+
+.creation .creationItem .creationItemSonTwo {
+    background-color: #fff;
+    height: 300rpx;
+    border-radius: 10rpx;
+    margin-bottom: 2rpx;
+}
+
+.creation .creationItem .creationItemSonTwoFather {
+    background-color: #fff;
+    width: 670rpx;
+    height: 300rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.creation .creationItem .creationItemSonTwoFather .imgFather {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300rpx;
+}
+
+.creation .creationItem .creationItemSonTwoFather .imgFather .img {
+    width: 100%;
+    height: 100%;
+}
+
+.creation .creationItem .creationItemSonTwoParameter {
+    width: 70%;
+    height: 300rpx;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.creation .creationItem .creationItemSonTwoParameter .NameM {
+    width: 100%;
+}
+
+.creation .creationItem .creationItemSonTwoParameter .Name {
+    font-size: 26rpx;
+    height: 50rpx;
+    overflow: hidden;
+    width: 80%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    margin-top: -30rpx;
+}
+
+.creation .creationItem .creationItemSonTwoParameter .Model {
+    font-size: 20rpx;
+    color: grey;
+    height: 50rpx;
+    margin: 20rpx 0;
+}
+
+.creation .creationItem .creationItemSonTwoParameter .Model,.Img {
+    display: flex;
+    align-items: center;
+}
+
+.Img {
+    width: 750rpx;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Img img {
+    height: 200rpx;
+}
+
+.Img img,.Img view {
+    width: 300rpx;
+    border-radius: 10rpx;
+    margin: 0 30rpx;
+}
+
+.Img view {
+    text-align: center;
+    padding: 20rpx 0;
+    color: #999;
+}

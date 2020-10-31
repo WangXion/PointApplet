@@ -1,0 +1,226 @@
+<view>
+    <view class="tabs">
+        <van-tabs animated swipeable active="{{active}}" color="#C28E90">
+            <van-tab title="全部">
+                <view class="order" wx:for="{{paymentAll}}" wx:key="index">
+                    <view class="title f28">
+						订单编号：{{item.order_id}}
+						      <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==0?true:false}}">待付款</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==1?true:false}}">待发货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==2?true:false}}">待收货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==3?true:false}}">待评价</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==-1?true:false}}">退款中</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==-2?true:false}}">已退款</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==4?true:false}}">已完成</view>
+                        <view style="color:#C28E90 ;width: 63px; display:flex;align-items: center;justify-content: space-between;" wx:if="{{item._status._type==5?true:false}}">已取消
+						  <image bindtap="del" data-orderid="{{item.order_id}}" src="/images/user/del.png" style="width:30rpx;height:30rpx"></image>
+                        </view>
+                    </view>
+                    <view class="conter" wx:for="{{item.cartInfo}}" wx:key="index">
+                        <view class="aaa">
+                            <image Alt="{{item.productInfo.image}}" src="{{item.productInfo.image}}"></image>
+                        </view>
+                        <view style=" flex: auto;  position: relative;">
+                            <view class="f32">{{item.productInfo.store_name}}</view>
+                            <view class="f26"> {{item.productInfo.attrInfo.suk}}</view>
+                            <view class="f32 bottom">
+								￥{{item.productInfo.price}}<text>x{{item.cart_num}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="amout">
+						共{{item.cart_num}}件
+						<view>应付总金额：
+							<text>￥{{item.pay_price}}</text>
+                        </view>
+                    </view>
+                    <view class="btns">
+                        <view bindtap="cancel" class="payOne" data-item="{{item}}" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==0?true:false}}">取消订单</view>
+                        <view bindtap="cancel" class="pay" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==0?true:false}}">继续支付</view>
+                        <view bindtap="remind" class="tix" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==1?true:false}}">提醒发货</view>
+                        <view bindtap="logistics" class="" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==2?true:false}}">查看物流</view>
+                        <view bindtap="navtoAftersale" class="" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==2?true:false}}">申请退款</view>
+                        <view bindtap="confirm" class="tix" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==2?true:false}}">确认收货</view>
+                        <view bindtap="evaluate" class="" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==3?true:false}}">查看物流</view>
+                        <view bindtap="navtoAftersale" class="" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==3?true:false}}">申请退款</view>
+                        <view bindtap="goDetails" class="tix" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==3?true:false}}">去评价</view>
+                        <view bindtap="goDetails" class="payOne" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==5?true:false}}">查看详情</view>
+                        <view bindtap="goDetails" class="payOne" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==4?true:false}}">查看详情</view>
+                        <view bindtap="Another" class="pay" data-id="{{item.cartInfo[0].product_id}}" data-image="{{item.cartInfo[0].productInfo.image}}" data-unique="{{item.cartInfo[0].productInfo.attrInfo.unique}}" hoverClass="useBg" wx:if="{{item._status._type==4?true:false}}">再来一单</view>
+                        <view bindtap="goDetails" class="payOne" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==-1?true:false}}">查看详情</view>
+                        <view bindtap="goDetails" class="payOne" data-ordeId="{{item.order_id}}" hoverClass="useBg" wx:if="{{item._status._type==-2?true:false}}">查看详情</view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab title="待付款">
+                <view class="order" wx:for="{{payment}}" wx:key="index">
+                    <view class="title f28">
+						订单编号：{{item.order_id}}
+						      <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==1?true:false}}">待发货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==0?true:false}}">待付款</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==2?true:false}}">待收货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==3?true:false}}">待评价</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==4?true:false}}">已完成</view>
+                    </view>
+                    <view class="conter" wx:for="{{item.cartInfo}}" wx:key="index">
+                        <view class="aaa">
+                            <image Alt="{{item.productInfo.image}}" src="{{item.productInfo.image}}"></image>
+                        </view>
+                        <view style=" flex: auto;  position: relative;">
+                            <view class="f32">{{item.productInfo.store_name}}</view>
+                            <view class="f26"> {{item.productInfo.attrInfo.suk}}</view>
+                            <view class="f32 bottom">
+								￥{{item.productInfo.price}}<text>x{{item.cart_num}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="amout">
+						共{{item.cart_num}}件
+						<view>应付总金额：
+							<text>￥{{item.pay_price}}</text>
+                        </view>
+                    </view>
+                    <view class="btns">
+                        <view bindtap="cancel" class="payOne" data-item="{{item}}" data-ordeId="{{item.order_id}}" hoverClass="useBg">取消订单</view>
+                        <view bindtap="cancel" class="pay" data-ordeId="{{item.order_id}}" hoverClass="useBg">继续支付</view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab title="待发货">
+                <view class="order" wx:for="{{paymentOne}}" wx:key="index">
+                    <view class="title f28">
+						订单编号：{{item.order_id}}
+						      <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==1?true:false}}">待发货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==0?true:false}}">待付款</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==2?true:false}}">待收货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==3?true:false}}">待评价</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==4?true:false}}">已完成</view>
+                    </view>
+                    <view class="conter" wx:for="{{item.cartInfo}}" wx:key="index">
+                        <view class="aaa">
+                            <image Alt="{{item.productInfo.image}}" src="{{item.productInfo.image}}"></image>
+                        </view>
+                        <view style=" flex: auto;  position: relative;">
+                            <view class="f32">{{item.productInfo.store_name}}</view>
+                            <view class="f26"> {{item.productInfo.attrInfo.suk}}</view>
+                            <view class="f32 bottom">
+								￥{{item.productInfo.price}}<text>x{{item.cart_num}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="amout">
+						共{{item.cart_num}}件
+						<view>应付总金额：
+							<text>￥{{item.pay_price}}</text>
+                        </view>
+                    </view>
+                    <view class="btns">
+                        <view bindtap="remind" class="tix" data-ordeId="{{item.order_id}}" hoverClass="useBg">提醒发货</view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab title="待收货">
+                <view class="order" wx:for="{{paymentTwo}}" wx:key="index">
+                    <view class="title f28">
+						订单编号：{{item.order_id}}
+						      <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==1?true:false}}">待发货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==0?true:false}}">待付款</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==2?true:false}}">待收货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==3?true:false}}">待评价</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==4?true:false}}">已完成</view>
+                    </view>
+                    <view class="conter" wx:for="{{item.cartInfo}}" wx:key="index">
+                        <view class="aaa">
+                            <image Alt="{{item.productInfo.image}}" src="{{item.productInfo.image}}"></image>
+                        </view>
+                        <view style=" flex: auto;  position: relative;">
+                            <view class="f32">{{item.productInfo.store_name}}</view>
+                            <view class="f26"> {{item.productInfo.attrInfo.suk}}</view>
+                            <view class="f32 bottom">
+								￥{{item.productInfo.price}}<text>x{{item.cart_num}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="amout">
+						共{{item.cart_num}}件
+						<view>应付总金额：
+							<text>￥{{item.pay_price}}</text>
+                        </view>
+                    </view>
+                    <view class="btns">
+                        <view bindtap="logistics" class="payOne" data-ordeId="{{item.order_id}}" hoverClass="useBg">查看物流</view>
+                        <view bindtap="confirm" class="tix" data-ordeId="{{item.order_id}}" hoverClass="useBg">确认收货</view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab title="待评价">
+                <view class="order" wx:for="{{paymentThree}}" wx:key="index">
+                    <view class="title f28">
+						订单编号：{{item.order_id}}
+						      <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==1?true:false}}">待发货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==0?true:false}}">待付款</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==2?true:false}}">待收货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==3?true:false}}">待评价</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==4?true:false}}">已完成</view>
+                    </view>
+                    <view class="conter" wx:for="{{item.cartInfo}}" wx:key="index">
+                        <view class="aaa">
+                            <image Alt="{{item.productInfo.image}}" src="{{item.productInfo.image}}"></image>
+                        </view>
+                        <view style=" flex: auto;  position: relative;">
+                            <view class="f32">{{item.productInfo.store_name}}</view>
+                            <view class="f26"> {{item.productInfo.attrInfo.suk}}</view>
+                            <view class="f32 bottom">
+								￥{{item.productInfo.price}}<text>x{{item.cart_num}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="amout">
+						共{{item.cart_num}}件
+						<view>应付总金额：
+							<text>￥{{item.pay_price}}</text>
+                        </view>
+                    </view>
+                    <view class="btns">
+                        <view bindtap="navtoAftersale" class="payOne" data-ordeId="{{item.order_id}}" hoverClass="useBg">申请退款</view>
+                        <view bindtap="evaluate" class="tix" data-ordeId="{{item.order_id}}" hoverClass="useBg">去评价</view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab title="已完成">
+                <view class="order" wx:for="{{paymentFour}}" wx:key="index">
+                    <view class="title f28">
+						订单编号：{{item.order_id}}
+						      <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==1?true:false}}">待发货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==0?true:false}}">待付款</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==2?true:false}}">待收货</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==3?true:false}}">待评价</view>
+                        <view style="color:#C28E90 ;width: 63px;text-align: right;" wx:if="{{item._status._type==4?true:false}}">已完成</view>
+                    </view>
+                    <view class="conter" wx:for="{{item.cartInfo}}" wx:key="index">
+                        <view class="aaa">
+                            <image Alt="{{item.productInfo.image}}" src="{{item.productInfo.image}}"></image>
+                        </view>
+                        <view style=" flex: auto;  position: relative;">
+                            <view class="f32">{{item.productInfo.store_name}}</view>
+                            <view class="f26"> {{item.productInfo.attrInfo.suk}}</view>
+                            <view class="f32 bottom">
+								￥{{item.productInfo.price}}<text>x{{item.cart_num}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="amout">
+						共{{item.cart_num}}件
+						<view>应付总金额：
+							<text>￥{{item.pay_price}}</text>
+                        </view>
+                    </view>
+                    <view class="btns">
+                        <view bindtap="goDetails" class="payOne" data-ordeId="{{item.order_id}}" hoverClass="useBg">查看详情</view>
+                        <view bindtap="Another" class="pay" data-id="{{item.cartInfo[0].product_id}}" data-image="{{item.cartInfo[0].productInfo.image}}" data-unique="{{item.cartInfo[0].productInfo.attrInfo.unique}}" hoverClass="useBg">再来一单</view>
+                    </view>
+                </view>
+            </van-tab>
+        </van-tabs>
+    </view>
+</view>

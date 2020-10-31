@@ -1,0 +1,23 @@
+{
+    "usingComponents": {
+        "van-checkbox": "/dist/checkbox/index",
+        "van-checkbox-group": "/dist/checkbox-group/index",
+        "van-tab": "/dist/tab/index",
+        "van-tabs": "/dist/tabs/index",
+        "van-radio": "/dist/radio/index",
+        "van-radio-group": "/dist/radio-group/index",
+        "van-button": "/dist/button/index",
+        "van-dialog": "/dist/dialog/index",
+        "van-popup": "/dist/popup/index",
+        "van-grid": "/dist/grid/index",
+        "van-grid-item": "/dist/grid-item/index",
+        "van-transition": "/dist/transition/index",
+        "van-collapse": "/dist/collapse/index",
+        "van-collapse-item": "/dist/collapse-item/index",
+        "van-icon": "/dist/icon/index",
+        "van-field": "/dist/field/index",
+        "van-rate": "/dist/rate/index",
+        "van-skeleton": "/dist/skeleton/index"
+    },
+    "navigationBarTitleText": "优惠券"
+}

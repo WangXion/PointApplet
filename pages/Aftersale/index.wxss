@@ -1,0 +1,207 @@
+.top {
+    margin: 30rpx;
+    background: #3d365e;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+    border-radius: 5px;
+    color: #fff;
+    padding: 40rpx 30rpx;
+}
+
+.top .text {
+    display: flex;
+    margin-top: 30rpx;
+    padding-bottom: 30rpx;
+}
+
+.dizhi {
+    background: #fff;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+    border-radius: 5px;
+    margin: 0 30rpx;
+    padding: 30rpx;
+}
+
+.dz_top {
+    display: flex;
+    align-items: center;
+}
+
+.dz_top view {
+    margin-left: 18rpx;
+}
+
+.dz_top image {
+    width: 26rpx;
+    height: 32rpx;
+}
+
+.dp {
+    margin: 30rpx;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+}
+
+.dp_list {
+    padding: 30rpx;
+    background: #fff;
+}
+
+.uploader-list {
+    width: 150rpx;
+    border-radius: 10rpx;
+}
+
+.uploader-list,.uploader-list view .delete {
+    display: flex;
+    position: relative;
+}
+
+.uploader-list view .delete {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    background: #c28e90;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    left: 99rpx;
+    top: -172rpx;
+}
+
+.body--textarea .input van-field {
+    height: 100rpx;
+}
+
+.good_list {
+    display: flex;
+    align-items: center;
+    height: 167rpx;
+}
+
+.good_list .goodname {
+    margin-left: 58rpx;
+    margin-right: 62rpx;
+    width: 23%;
+    height: 100%;
+}
+
+.home {
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.amout text {
+    color: #c28e90;
+}
+
+.amout>view {
+    margin-left: 33rpx;
+}
+
+.amout {
+    margin-top: 70rpx;
+}
+
+.amout,.amout_good {
+    display: flex;
+    align-items: center;
+}
+
+.amout_good {
+    margin-top: 65rpx;
+    justify-content: space-between;
+}
+
+page {
+    height: 100%;
+    background: #f5f5f5;
+}
+
+.types {
+    margin: 30rpx;
+    background: #fff;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+}
+
+.types .title {
+    margin-bottom: 30rpx;
+    font-size: 28rpx;
+    color: #777;
+}
+
+.van-cell__title {
+    color: #777;
+}
+
+.van-cell {
+    height: 115rpx;
+}
+
+.Feedback {
+    padding: 30rpx;
+    margin: 30rpx;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,.05);
+}
+
+.din {
+    height: 100rpx;
+    margin-bottom: 2rpx;
+    border-radius: 5rpx;
+    font-size: 28rpx;
+    padding: 30rpx 20rpx;
+    box-sizing: border-box;
+}
+
+.din,.Feedback .title {
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.Feedback .title {
+    justify-content: space-between;
+    width: 630rpx;
+    height: 86rpx;
+    border-radius: 5px;
+}
+
+.Feedback .title view:first-child {
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #777;
+}
+
+.Feedback .title view:nth-child(2) {
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 700;
+    color: #333;
+}
+
+.Feedback .conter {
+    font-size: 24rpx;
+    color: #777;
+}
+
+.Feedback .conter view {
+    margin-top: 30rpx;
+}
+
+.tie {
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addbtn {
+    margin: 80rpx 30rpx 0;
+    height: 88rpx;
+    line-height: 88rpx;
+    color: #fff;
+    text-align: center;
+    background: #3d365e;
+    border: 1px solid #3a345a;
+    border-radius: 5px;
+}

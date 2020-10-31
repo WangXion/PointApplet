@@ -1,0 +1,26 @@
+{
+    "usingComponents": {
+        "van-field": "/dist/field/index",
+        "van-picker": "/dist/picker/index",
+        "van-popup": "/dist/popup/index",
+        "van-button": "/dist/button/index",
+        "van-dialog": "/dist/dialog/index",
+        "van-radio": "/dist/radio/index",
+        "van-radio-group": "/dist/radio-group/index",
+        "van-grid": "/dist/grid/index",
+        "van-grid-item": "/dist/grid-item/index",
+        "van-transition": "/dist/transition/index",
+        "van-tab": "/dist/tab/index",
+        "van-tabs": "/dist/tabs/index",
+        "van-collapse": "/dist/collapse/index",
+        "van-collapse-item": "/dist/collapse-item/index",
+        "van-icon": "/dist/icon/index",
+        "van-rate": "/dist/rate/index",
+        "van-checkbox": "/dist/checkbox/index",
+        "van-cell": "/dist/cell/index",
+        "van-cell-group": "/dist/cell-group/index",
+        "van-checkbox-group": "/dist/checkbox-group/index",
+        "van-skeleton": "/dist/skeleton/index"
+    },
+    "navigationBarTitleText": "银行卡编辑"
+}

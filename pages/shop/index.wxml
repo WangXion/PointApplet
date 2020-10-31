@@ -1,0 +1,135 @@
+<view wx:if="{{sum==0}}">
+    <view class="kong">
+        <image src="http://graph.baidu.com/resource/1223b98fabfcfbe87677c01596762740.jpg"></image>
+        <view class="f24">非常难为情地说，您的购物车里空空如也...</view>
+        <navigator class="btns  f28" openType="switchTab" url="/pages/home/home">去逛逛</navigator>
+    </view>
+    <view class="box">
+        <view style="margin:0 20rpx">
+            <view class="f36 title">为您推荐</view>
+            <van-tabs animated class="index-tabs">
+                <van-tab title="手机壳">
+                    <view class="listFa" style="flex-direction:row;">
+                        <view class="list" wx:for="{{call}}" wx:key="index">
+                            <view class="listImg">
+                                <image src="{{item.image}}"></image>
+                            </view>
+                            <view class="bottom">
+                                <view class="f28">
+									{{item.store_name}}
+								</view>
+                                <view class="f24">
+							    {{item.unit_name}}
+								</view>
+                            </view>
+                        </view>
+                    </view>
+                </van-tab>
+                <van-tab title="保温杯">
+                    <view class="listFa" style="flex-direction:row;">
+                        <view class="list" wx:for="{{vacuum}}" wx:key="index">
+                            <view class="listImg">
+                                <image src="{{item.image}}"></image>
+                            </view>
+                            <view class="bottom">
+                                <view class="f28">
+									{{item.store_name}}
+								</view>
+                                <view class="f24">
+							    {{item.unit_name}}
+								</view>
+                            </view>
+                        </view>
+                    </view>
+                </van-tab>
+                <van-tab title="T恤">
+                    <view class="listFa" style="flex-direction:row;">
+                        <view class="list" wx:for="{{tShirt}}" wx:key="index">
+                            <view class="listImg">
+                                <image src="{{item.image}}"></image>
+                            </view>
+                            <view class="bottom">
+                                <view class="f28">
+									{{item.store_name}}
+								</view>
+                                <view class="f24">
+							    {{item.unit_name}}
+								</view>
+                            </view>
+                        </view>
+                    </view>
+                </van-tab>
+            </van-tabs>
+        </view>
+    </view>
+</view>
+<view class="goods" wx:if="{{sum>0}}">
+    <view class="f36 title" style="padding-bottom:60rpx">
+			共{{sum}}件商品
+		</view>
+</view>
+<view id="shop" wx:if="{{sum>0}}">
+    <view wx:for="{{cart}}" wx:key="index">
+        <van-swipe-cell rightWidth="{{65}}">
+            <van-cell-group>
+                <view class="shop-item">
+                    <view class="pd">
+                        <radio-group bindtap="handleItemChange" data-id="{{item.cate_id}}" data-index="{{index}}" data-istrue="{{item.istrue}}" data-num="{{item.cart_num}}" data-price="{{item.productInfo.price}}">
+                            <radio checked="{{item.istrue}}" class="checked" color="#C28E90" style="background:rgba(255,255,255,1);"></radio>
+                        </radio-group>
+                        <view class="img">
+                            <image catchtap="goDetails" data-id="{{item.product_id}}" data-name="cupdetail" src="{{item.img}}" wx:if="{{item.productInfo.cate_name=='保温杯'?true:false}}"></image>
+                            <image catchtap="goDetails" data-id="{{item.product_id}}" data-name="shirtdetail" src="{{item.img}}" wx:if="{{item.productInfo.cate_name=='服装'?true:false}}"></image>
+                            <image catchtap="goDetails" data-id="{{item.product_id}}" data-name="detail" src="{{item.img}}" wx:if="{{item.productInfo.cate_name=='手机壳'?true:false}}"></image>
+                        </view>
+                        <view class="shuju">
+                            <view catchtap="goDetails" class="left" data-id="{{item.product_id}}" data-name="cupdetail" wx:if="{{item.productInfo.cate_name=='保温杯'?true:false}}">
+                                <view class="name">{{item.productInfo.store_name}}</view>
+                                <view class="xh">{{item.productInfo.attrInfo.suk}}</view>
+                            </view>
+                            <view catchtap="goDetails" class="left" data-id="{{item.product_id}}" data-name="shirtdetail" wx:if="{{item.productInfo.cate_name=='服装'?true:false}}">
+                                <view class="name">{{item.productInfo.store_name}}</view>
+                                <view class="xh">{{item.productInfo.attrInfo.suk}}</view>
+                            </view>
+                            <view catchtap="goDetails" class="left" data-id="{{item.product_id}}" data-name="detail" wx:if="{{item.productInfo.cate_name=='手机壳'?true:false}}">
+                                <view class="name">{{item.productInfo.store_name}}</view>
+                                <view class="xh">{{item.productInfo.attrInfo.suk}}</view>
+                            </view>
+                            <view class="right">
+                                <view class="price">￥ {{item.productInfo.price}}
+								</view>
+                                <view class="count">
+                                    <view bindtap="handleEdit" class="buttomOne" data-id="{{item.id}}" data-index="{{index}}" data-operation="{{-1}}">
+                                        <view>-</view>
+                                    </view>
+                                    <text class="input">{{item.cart_num}}</text>
+                                    <view bindtap="handleEdit" class="buttomTwo" data-id="{{item.id}}" data-index="{{index}}" data-operation="{{1}}">
+                                        <view>+</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </van-cell-group>
+            <view slot="right">
+                <view bindtap="dele" class="box_right" data-id="{{item.id}}" data-index="{{index}}">
+                    <image src="/images/user/btns.png" style="width:60rpx;height:60rpx"></image>
+                </view>
+            </view>
+        </van-swipe-cell>
+    </view>
+    <view id="zong">
+        <view class="checkAll-item">
+            <radio-group bindtap="handleItemAllcheck">
+                <radio checked="{{allchecked}}" color="#C28E90">全选</radio>
+            </radio-group>
+            <view class="shu">
+                <text>共计:</text>
+                <text class="price">￥{{totalPrice}}</text>元</view>
+        </view>
+        <view bindtap="navtos" class="calculate" data-totalNum="{{totalNum}}" data-totalPrice="{{totalPrice}}" hoverClass="feedBack">
+            <view class="button">去结算</view>
+        </view>
+    </view>
+</view>

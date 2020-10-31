@@ -1,0 +1,45 @@
+<view class="page">
+    <view class="express">
+        <view class="top ali-c">
+            <view class="text">
+                <view class="Name">
+                    <image class="dizhi" mode="aspectFill" src="/images/user/dz.png"></image>
+                    <view class="text1">
+         彭于晏 {{wlInfo.post_name}}</view>
+                </view>
+                <view class="text2">浙江省 杭州市 余杭区 高教路浙江丽水数字大厦A座6楼杭州
+弥点定制{{wlInfo.exp_phone}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="content bgf">
+        <view class="loca">
+            <view class="left">订单跟踪</view>
+            <view class="right">
+                <input disabled bindtap="textPaste" class="inp" placeholder="圆通速递：956957655965988987" selectable="true">
+                    <image src="https://cunjifen.oss-cn-beijing.aliyuncs.com/userImg/1597038762190.gif"></image>
+                </input>
+            </view>
+        </view>
+        <view>
+            <view class="flex list">
+                <view class="info flex1">
+                    <view class="title address">[收货地址]{{wlInfo.addr}}</view>
+                    <view class="timeOver">订单完成</view>
+                    <view class="time">2020/12/12</view>
+                </view>
+            </view>
+            <view :class="{one: index == 0 && wlInfo.delivery_status == 1}" class="flex list" vFor="{{list}}">
+                <view class="time">
+                    <view class="go">订单交易完成</view>
+                    <view class="day">2020-12-12</view>
+                    <view class="ti">16:58</view>
+                </view>
+                <view class="info flex1">
+                    <view class="title">{{index==0&&wlInfo.delivery_status==1?'已签收':'配送中'}}</view>
+                    <view class="text">{{item.context}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
